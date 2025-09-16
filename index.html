@@ -1688,52 +1688,34 @@
         }
 
         function sendToGoogleSheets(results) {
-    const studentName = document.getElementById('student-name').value;
-    const studentClass = document.getElementById('student-class').value;
-    const timestamp = new Date().toLocaleString('id-ID');
-
-    // Prepare detailed answers
-    const answers = userAnswers.map((answer, index) => {
-        const question = quizQuestions[index];
-        return {
-            question: question.question,
-            userAnswer: question.options[answer] || 'Tidak dijawab',
-            correctAnswer: question.options[question.correct],
-            isCorrect: answer === question.correct
-        };
-    });
-
-    const data = {
-        timestamp: timestamp,
-        name: studentName,
-        class: studentClass,
-        score: results.score,
-        correctCount: results.correctCount,
-        incorrectCount: results.incorrectCount,
-        timeTaken: formatTime(results.timeTaken),
-        answers: answers
-    };
-
-    // URL Web App dari Apps Script
-    const scriptURL = "PASTE_WEB_APP_URL_HERE";
-
-    fetch(scriptURL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-    })
-    .then(res => res.json())
-    .then(response => {
-        console.log("Sukses:", response);
-        showNotification("Data berhasil dikirim ke Google Sheets ✅", "success");
-    })
-    .catch(err => {
-        console.error("Error:", err);
-        showNotification("Gagal mengirim data ke Google Sheets ❌", "error");
-    });
+            const studentName = document.getElementById('student-name').value;
+            const studentClass = document.getElementById('student-class').value;
+            const timestamp = new Date().toLocaleString('id-ID');
+            
+            // Prepare detailed answers
+            const answers = userAnswers.map((answer, index) => {
+                const question = quizQuestions[index];
+                return {
+                    question: question.question,
+                    userAnswer: question.options[answer] || 'Tidak dijawab',
+                    correctAnswer: question.options[question.correct],
+                    isCorrect: answer === question.correct
+                };
+            });
+            
+            const data = {
+                timestamp: timestamp,
+                name: studentName,
+                class: studentClass,
+                score: results.score,
+                correctCount: results.correctCount,
+                incorrectCount: results.incorrectCount,
+                timeTaken: formatTime(results.timeTaken),
+                answers: answers
+            };
             
             // Google Apps Script Web App URL (replace with your actual URL)
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbznF2CIkLnfhoa5L_12PJAx29L5I9MB9Tj-LuBhwDQs/exec';
+            const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
             
             fetch(scriptURL, {
                 method: 'POST',
@@ -1899,7 +1881,7 @@
             showNotification('Selamat datang di pembelajaran Komputer & Jaringan! 🎓', 'success');
         });
 
-        // Close modals when clicking 
+        // Close modals when clicking outside
         document.addEventListener('click', function(e) {
             if (e.target.classList.contains('fixed') && e.target.classList.contains('inset-0')) {
                 const modalId = e.target.id;
