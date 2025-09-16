@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pembelajaran Komputer dan Jaringan - SMK Kelas 12</title>
+    <title>Pembelajaran Komputer dan Jaringan - Kelas 12 SMK</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -37,142 +37,12 @@
         }
         
         .network-animation {
-            animation: networkPulse 3s infinite;
+            animation: networkPulse 3s ease-in-out infinite;
         }
         
         @keyframes networkPulse {
-            0%, 100% { opacity: 0.3; }
+            0%, 100% { opacity: 0.7; }
             50% { opacity: 1; }
-        }
-        
-        /* Welcome Animation Styles */
-        .welcome-animation {
-            animation: welcomeFloat 4s ease-in-out infinite;
-        }
-        
-        @keyframes welcomeFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .bg-pulse {
-            animation: bgPulse 4s ease-in-out infinite;
-        }
-        
-        .bg-pulse-2 {
-            animation: bgPulse 3s ease-in-out infinite reverse;
-        }
-        
-        @keyframes bgPulse {
-            0%, 100% { opacity: 0.1; transform: scale(1); }
-            50% { opacity: 0.3; transform: scale(1.1); }
-        }
-        
-        .router-bounce {
-            animation: routerBounce 2s ease-in-out infinite;
-        }
-        
-        @keyframes routerBounce {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(-5px) scale(1.05); }
-        }
-        
-        .wifi-signal-1 {
-            animation: wifiPulse 2s ease-in-out infinite;
-        }
-        
-        .wifi-signal-2 {
-            animation: wifiPulse 2s ease-in-out infinite 0.3s;
-        }
-        
-        .wifi-signal-3 {
-            animation: wifiPulse 2s ease-in-out infinite 0.6s;
-        }
-        
-        @keyframes wifiPulse {
-            0%, 100% { opacity: 0.3; stroke-width: 1; }
-            50% { opacity: 1; stroke-width: 3; }
-        }
-        
-        .device-float-1 {
-            animation: deviceFloat 3s ease-in-out infinite;
-        }
-        
-        .device-float-2 {
-            animation: deviceFloat 3.5s ease-in-out infinite 0.5s;
-        }
-        
-        .device-float-3 {
-            animation: deviceFloat 2.8s ease-in-out infinite 1s;
-        }
-        
-        .device-float-4 {
-            animation: deviceFloat 3.2s ease-in-out infinite 1.5s;
-        }
-        
-        .device-float-5 {
-            animation: deviceFloat 2.5s ease-in-out infinite 0.8s;
-        }
-        
-        @keyframes deviceFloat {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-3px) rotate(1deg); }
-            75% { transform: translateY(3px) rotate(-1deg); }
-        }
-        
-        .data-flow-1 {
-            animation: dataFlow 3s linear infinite;
-        }
-        
-        .data-flow-2 {
-            animation: dataFlow 2.5s linear infinite 0.5s;
-        }
-        
-        .data-flow-3 {
-            animation: dataFlow 3.5s linear infinite 1s;
-        }
-        
-        .data-flow-4 {
-            animation: dataFlow 2.8s linear infinite 1.5s;
-        }
-        
-        .data-flow-5 {
-            animation: dataFlow 3.2s linear infinite 0.3s;
-        }
-        
-        @keyframes dataFlow {
-            0%, 100% { opacity: 0.3; stroke-width: 1; }
-            50% { opacity: 1; stroke-width: 3; }
-        }
-        
-        .icon-float-1 {
-            animation: iconFloat 4s ease-in-out infinite;
-        }
-        
-        .icon-float-2 {
-            animation: iconFloat 3.5s ease-in-out infinite 0.5s;
-        }
-        
-        .icon-float-3 {
-            animation: iconFloat 3s ease-in-out infinite 1s;
-        }
-        
-        .icon-float-4 {
-            animation: iconFloat 4.5s ease-in-out infinite 1.5s;
-        }
-        
-        .icon-float-5 {
-            animation: iconFloat 3.8s ease-in-out infinite 0.8s;
-        }
-        
-        .icon-float-6 {
-            animation: iconFloat 3.3s ease-in-out infinite 2s;
-        }
-        
-        @keyframes iconFloat {
-            0%, 100% { transform: translateY(0px) scale(1); opacity: 0.7; }
-            25% { transform: translateY(-8px) scale(1.1); opacity: 1; }
-            75% { transform: translateY(5px) scale(0.9); opacity: 0.8; }
         }
         
         .quiz-correct {
@@ -185,1719 +55,969 @@
             color: white;
         }
         
-        .progress-bar {
-            transition: width 0.5s ease;
+        .quiz-option {
+            transition: all 0.3s ease;
+        }
+        
+        .quiz-option:hover {
+            background-color: #f3f4f6;
+            transform: translateX(5px);
         }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="gradient-bg text-white py-6 sticky top-0 z-50 shadow-lg">
+    <header class="gradient-bg text-white py-6 shadow-lg">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-network-wired text-3xl"></i>
-                    <h1 class="text-2xl font-bold">Komputer & Jaringan</h1>
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-network-wired text-3xl pulse-animation"></i>
+                    <div>
+                        <h1 class="text-2xl font-bold">Komputer dan Jaringan</h1>
+                        <p class="text-blue-100">Pembelajaran Interaktif Kelas 12 SMK</p>
+                    </div>
                 </div>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#home" class="hover:text-yellow-300 transition-colors">Beranda</a>
-                    <a href="#materi" class="hover:text-yellow-300 transition-colors">Materi</a>
-                    <a href="#contoh-soal" class="hover:text-yellow-300 transition-colors">Contoh Soal</a>
-                    <a href="#kuis" class="hover:text-yellow-300 transition-colors">Kuis</a>
-                </nav>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#materi" class="hover:text-blue-200 transition-colors">📚 Materi</a>
+                    <a href="#contoh-soal" class="hover:text-blue-200 transition-colors">📝 Contoh Soal</a>
+                    <a href="#kuis" class="hover:text-blue-200 transition-colors">🎯 Kuis</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="gradient-bg text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-5xl font-bold mb-6">Selamat Datang di Pembelajaran Interaktif</h2>
-                <p class="text-xl mb-8">Pelajari Komputer dan Jaringan dengan cara yang menyenangkan dan mudah dipahami!</p>
-                <div class="flex justify-center mb-8">
-                    <div class="relative">
-                        <svg width="400" height="250" viewBox="0 0 400 250" class="welcome-animation">
-                            <!-- Background circles for depth -->
-                            <circle cx="200" cy="125" r="80" fill="rgba(59, 130, 246, 0.1)" class="bg-pulse"/>
-                            <circle cx="200" cy="125" r="60" fill="rgba(16, 185, 129, 0.1)" class="bg-pulse-2"/>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex space-x-8 py-4 overflow-x-auto">
+                <button onclick="showSection('pengertian')" class="nav-btn bg-blue-500 text-white px-4 py-2 rounded-lg whitespace-nowrap">
+                    🌐 Pengertian Jaringan
+                </button>
+                <button onclick="showSection('jenis')" class="nav-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg whitespace-nowrap">
+                    📡 Jenis Jaringan
+                </button>
+                <button onclick="showSection('perangkat')" class="nav-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg whitespace-nowrap">
+                    🔧 Perangkat Jaringan
+                </button>
+                <button onclick="showSection('topologi')" class="nav-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg whitespace-nowrap">
+                    🔗 Topologi Jaringan
+                </button>
+                <button onclick="showSection('ip')" class="nav-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg whitespace-nowrap">
+                    🏠 IP Address
+                </button>
+                <button onclick="showSection('keamanan')" class="nav-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg whitespace-nowrap">
+                    🔒 Keamanan Jaringan
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8" id="materi">
+        
+        <!-- Pengertian Jaringan Komputer -->
+        <section id="pengertian" class="content-section">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 card-hover">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-globe text-blue-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Pengertian Jaringan Komputer</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                            Jaringan komputer adalah kumpulan dua atau lebih komputer yang saling terhubung untuk berbagi data, informasi, dan sumber daya seperti printer, internet, atau file.
+                        </p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <h3 class="font-semibold text-blue-800 mb-2">💡 Tujuan Jaringan Komputer:</h3>
+                            <ul class="list-disc list-inside text-blue-700 space-y-1">
+                                <li>Berbagi sumber daya (Resource Sharing)</li>
+                                <li>Komunikasi antar pengguna</li>
+                                <li>Akses informasi dari jarak jauh</li>
+                                <li>Meningkatkan efisiensi kerja</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center">
+                        <svg width="300" height="200" viewBox="0 0 300 200" class="network-animation">
+                            <!-- Server -->
+                            <rect x="130" y="20" width="40" height="30" fill="#4f46e5" rx="5"/>
+                            <text x="150" y="38" text-anchor="middle" fill="white" font-size="10">Server</text>
                             
-                            <!-- Central Router/Server -->
-                            <g class="router-bounce">
-                                <rect x="175" y="100" width="50" height="30" fill="#fbbf24" rx="8" stroke="#f59e0b" stroke-width="2"/>
-                                <circle cx="185" cy="110" r="3" fill="#f59e0b"/>
-                                <circle cx="195" cy="110" r="3" fill="#10b981"/>
-                                <circle cx="205" cy="110" r="3" fill="#ef4444"/>
-                                <circle cx="215" cy="110" r="3" fill="#3b82f6"/>
-                                <text x="200" y="125" text-anchor="middle" fill="white" font-size="8" font-weight="bold">ROUTER</text>
-                                
-                                <!-- WiFi signals -->
-                                <path d="M 190 95 Q 200 85 210 95" stroke="#10b981" stroke-width="2" fill="none" class="wifi-signal-1"/>
-                                <path d="M 185 90 Q 200 75 215 90" stroke="#10b981" stroke-width="2" fill="none" class="wifi-signal-2"/>
-                                <path d="M 180 85 Q 200 65 220 85" stroke="#10b981" stroke-width="2" fill="none" class="wifi-signal-3"/>
-                            </g>
+                            <!-- Komputer 1 -->
+                            <rect x="30" y="120" width="35" height="25" fill="#10b981" rx="3"/>
+                            <text x="47" y="135" text-anchor="middle" fill="white" font-size="8">PC 1</text>
                             
-                            <!-- Connected Devices with animations -->
-                            <!-- Laptop 1 -->
-                            <g class="device-float-1">
-                                <rect x="60" y="50" width="40" height="25" fill="#3b82f6" rx="3"/>
-                                <rect x="65" y="55" width="30" height="15" fill="#1e40af" rx="1"/>
-                                <text x="80" y="90" text-anchor="middle" fill="white" font-size="10">💻 Laptop</text>
-                            </g>
+                            <!-- Komputer 2 -->
+                            <rect x="130" y="120" width="35" height="25" fill="#10b981" rx="3"/>
+                            <text x="147" y="135" text-anchor="middle" fill="white" font-size="8">PC 2</text>
                             
-                            <!-- Smartphone -->
-                            <g class="device-float-2">
-                                <rect x="320" y="60" width="20" height="35" fill="#10b981" rx="5"/>
-                                <rect x="323" y="65" width="14" height="20" fill="#059669" rx="2"/>
-                                <circle cx="330" cy="90" r="2" fill="#059669"/>
-                                <text x="330" y="110" text-anchor="middle" fill="white" font-size="10">📱 Phone</text>
-                            </g>
+                            <!-- Komputer 3 -->
+                            <rect x="230" y="120" width="35" height="25" fill="#10b981" rx="3"/>
+                            <text x="247" y="135" text-anchor="middle" fill="white" font-size="8">PC 3</text>
                             
-                            <!-- Desktop PC -->
-                            <g class="device-float-3">
-                                <rect x="70" y="170" width="35" height="25" fill="#8b5cf6" rx="3"/>
-                                <rect x="75" y="175" width="25" height="15" fill="#7c3aed" rx="1"/>
-                                <rect x="85" y="195" width="5" height="10" fill="#6b7280"/>
-                                <rect x="80" y="205" width="15" height="3" fill="#6b7280" rx="1"/>
-                                <text x="87" y="225" text-anchor="middle" fill="white" font-size="10">🖥️ PC</text>
-                            </g>
+                            <!-- Koneksi -->
+                            <line x1="150" y1="50" x2="47" y2="120" stroke="#6366f1" stroke-width="2"/>
+                            <line x1="150" y1="50" x2="147" y2="120" stroke="#6366f1" stroke-width="2"/>
+                            <line x1="150" y1="50" x2="247" y2="120" stroke="#6366f1" stroke-width="2"/>
                             
-                            <!-- Tablet -->
-                            <g class="device-float-4">
-                                <rect x="300" y="180" width="30" height="20" fill="#f59e0b" rx="4"/>
-                                <rect x="305" y="185" width="20" height="10" fill="#d97706" rx="1"/>
-                                <text x="315" y="215" text-anchor="middle" fill="white" font-size="10">📱 Tablet</text>
-                            </g>
-                            
-                            <!-- Smart TV -->
-                            <g class="device-float-5">
-                                <rect x="160" y="30" width="45" height="25" fill="#ef4444" rx="3"/>
-                                <rect x="165" y="35" width="35" height="15" fill="#dc2626" rx="1"/>
-                                <rect x="180" y="55" width="5" height="8" fill="#6b7280"/>
-                                <text x="182" y="75" text-anchor="middle" fill="white" font-size="10">📺 Smart TV</text>
-                            </g>
-                            
-                            <!-- Animated connection lines -->
-                            <g class="connections">
-                                <line x1="175" y1="115" x2="100" y2="75" stroke="#10b981" stroke-width="2" class="data-flow-1"/>
-                                <line x1="225" y1="115" x2="320" y2="85" stroke="#3b82f6" stroke-width="2" class="data-flow-2"/>
-                                <line x1="175" y1="115" x2="105" y2="185" stroke="#8b5cf6" stroke-width="2" class="data-flow-3"/>
-                                <line x1="225" y1="115" x2="300" y2="190" stroke="#f59e0b" stroke-width="2" class="data-flow-4"/>
-                                <line x1="200" y1="100" x2="182" y2="55" stroke="#ef4444" stroke-width="2" class="data-flow-5"/>
-                            </g>
-                            
-                            <!-- Data packets animation -->
-                            <circle r="3" fill="#fbbf24" class="data-packet-1">
-                                <animateMotion dur="3s" repeatCount="indefinite">
-                                    <path d="M 175 115 L 100 75"/>
-                                </animateMotion>
-                            </circle>
-                            <circle r="3" fill="#3b82f6" class="data-packet-2">
-                                <animateMotion dur="2.5s" repeatCount="indefinite">
-                                    <path d="M 225 115 L 320 85"/>
-                                </animateMotion>
-                            </circle>
-                            <circle r="3" fill="#8b5cf6" class="data-packet-3">
-                                <animateMotion dur="3.5s" repeatCount="indefinite">
-                                    <path d="M 175 115 L 105 185"/>
-                                </animateMotion>
-                            </circle>
-                            
-                            <!-- Floating icons -->
-                            <g class="floating-icons">
-                                <text x="50" y="120" font-size="20" class="icon-float-1">🌐</text>
-                                <text x="350" y="140" font-size="18" class="icon-float-2">📡</text>
-                                <text x="120" y="30" font-size="16" class="icon-float-3">⚡</text>
-                                <text x="280" y="40" font-size="14" class="icon-float-4">🔒</text>
-                                <text x="80" y="240" font-size="16" class="icon-float-5">💾</text>
-                                <text x="320" y="230" font-size="18" class="icon-float-6">☁️</text>
-                            </g>
+                            <!-- Switch/Hub -->
+                            <circle cx="150" cy="80" r="15" fill="#f59e0b"/>
+                            <text x="150" y="85" text-anchor="middle" fill="white" font-size="8">HUB</text>
                         </svg>
                     </div>
                 </div>
-                <button onclick="scrollToSection('materi')" class="bg-yellow-400 text-gray-800 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
-                    Mulai Belajar <i class="fas fa-arrow-right ml-2"></i>
+            </div>
+        </section>
+
+        <!-- Jenis Jaringan -->
+        <section id="jenis" class="content-section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 card-hover">
+                <div class="flex items-center mb-6">
+                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-sitemap text-green-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Jenis-Jenis Jaringan Komputer</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- LAN -->
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg card-hover">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-building text-blue-600 text-4xl mb-2"></i>
+                            <h3 class="text-xl font-bold text-blue-800">LAN</h3>
+                            <p class="text-sm text-blue-600">Local Area Network</p>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>• Jangkauan: Satu gedung/area terbatas</li>
+                            <li>• Kecepatan: Sangat tinggi (100 Mbps - 1 Gbps)</li>
+                            <li>• Contoh: Jaringan sekolah, kantor</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- MAN -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-lg card-hover">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-city text-yellow-600 text-4xl mb-2"></i>
+                            <h3 class="text-xl font-bold text-yellow-800">MAN</h3>
+                            <p class="text-sm text-yellow-600">Metropolitan Area Network</p>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>• Jangkauan: Satu kota</li>
+                            <li>• Kecepatan: Tinggi (10-100 Mbps)</li>
+                            <li>• Contoh: Jaringan antar kampus</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- WAN -->
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg card-hover">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-globe-americas text-purple-600 text-4xl mb-2"></i>
+                            <h3 class="text-xl font-bold text-purple-800">WAN</h3>
+                            <p class="text-sm text-purple-600">Wide Area Network</p>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>• Jangkauan: Antar negara/benua</li>
+                            <li>• Kecepatan: Bervariasi</li>
+                            <li>• Contoh: Internet</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Video Placeholder -->
+                <div class="mt-8 bg-gray-100 rounded-lg p-6 text-center">
+                    <i class="fas fa-play-circle text-6xl text-gray-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-gray-600 mb-2">Video: Perbedaan LAN, MAN, dan WAN</h3>
+                    <p class="text-gray-500">Animasi interaktif menjelaskan jangkauan dan karakteristik setiap jenis jaringan</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perangkat Jaringan -->
+        <section id="perangkat" class="content-section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 card-hover">
+                <div class="flex items-center mb-6">
+                    <div class="bg-orange-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-tools text-orange-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Perangkat Jaringan</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Router -->
+                    <div class="bg-red-50 p-4 rounded-lg text-center card-hover">
+                        <i class="fas fa-wifi text-red-500 text-3xl mb-3"></i>
+                        <h3 class="font-bold text-red-700 mb-2">Router</h3>
+                        <p class="text-sm text-gray-600">Menghubungkan berbagai jaringan dan mengatur lalu lintas data</p>
+                    </div>
+                    
+                    <!-- Switch -->
+                    <div class="bg-blue-50 p-4 rounded-lg text-center card-hover">
+                        <i class="fas fa-network-wired text-blue-500 text-3xl mb-3"></i>
+                        <h3 class="font-bold text-blue-700 mb-2">Switch</h3>
+                        <p class="text-sm text-gray-600">Menghubungkan perangkat dalam satu jaringan LAN</p>
+                    </div>
+                    
+                    <!-- Hub -->
+                    <div class="bg-green-50 p-4 rounded-lg text-center card-hover">
+                        <i class="fas fa-circle-nodes text-green-500 text-3xl mb-3"></i>
+                        <h3 class="font-bold text-green-700 mb-2">Hub</h3>
+                        <p class="text-sm text-gray-600">Perangkat sederhana untuk menghubungkan komputer</p>
+                    </div>
+                    
+                    <!-- Access Point -->
+                    <div class="bg-purple-50 p-4 rounded-lg text-center card-hover">
+                        <i class="fas fa-broadcast-tower text-purple-500 text-3xl mb-3"></i>
+                        <h3 class="font-bold text-purple-700 mb-2">Access Point</h3>
+                        <p class="text-sm text-gray-600">Menyediakan akses wireless ke jaringan</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-yellow-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-yellow-800 mb-4">🔍 Perbedaan Hub dan Switch:</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-2">Hub (Collision Domain)</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Mengirim data ke semua port</li>
+                                <li>• Berbagi bandwidth</li>
+                                <li>• Collision domain besar</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-2">Switch (Switching)</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Mengirim data ke port tujuan saja</li>
+                                <li>• Bandwidth penuh per port</li>
+                                <li>• Collision domain per port</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topologi Jaringan -->
+        <section id="topologi" class="content-section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 card-hover">
+                <div class="flex items-center mb-6">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-project-diagram text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Topologi Jaringan</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Star -->
+                    <div class="bg-blue-50 p-6 rounded-lg card-hover">
+                        <h3 class="font-bold text-blue-800 mb-4 text-center">⭐ Topologi Star</h3>
+                        <svg width="150" height="120" viewBox="0 0 150 120" class="mx-auto mb-4">
+                            <circle cx="75" cy="60" r="8" fill="#3b82f6"/>
+                            <circle cx="30" cy="30" r="6" fill="#10b981"/>
+                            <circle cx="120" cy="30" r="6" fill="#10b981"/>
+                            <circle cx="30" cy="90" r="6" fill="#10b981"/>
+                            <circle cx="120" cy="90" r="6" fill="#10b981"/>
+                            <line x1="75" y1="60" x2="30" y2="30" stroke="#6366f1" stroke-width="2"/>
+                            <line x1="75" y1="60" x2="120" y2="30" stroke="#6366f1" stroke-width="2"/>
+                            <line x1="75" y1="60" x2="30" y2="90" stroke="#6366f1" stroke-width="2"/>
+                            <line x1="75" y1="60" x2="120" y2="90" stroke="#6366f1" stroke-width="2"/>
+                        </svg>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-semibold text-green-600">✅ Kelebihan:</p>
+                            <p>• Mudah troubleshooting</p>
+                            <p>• Kerusakan satu node tidak mempengaruhi yang lain</p>
+                            <p class="font-semibold text-red-600 mt-2">❌ Kekurangan:</p>
+                            <p>• Bergantung pada hub/switch pusat</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Bus -->
+                    <div class="bg-green-50 p-6 rounded-lg card-hover">
+                        <h3 class="font-bold text-green-800 mb-4 text-center">🚌 Topologi Bus</h3>
+                        <svg width="150" height="120" viewBox="0 0 150 120" class="mx-auto mb-4">
+                            <line x1="20" y1="60" x2="130" y2="60" stroke="#3b82f6" stroke-width="4"/>
+                            <circle cx="40" cy="40" r="6" fill="#10b981"/>
+                            <circle cx="75" cy="40" r="6" fill="#10b981"/>
+                            <circle cx="110" cy="40" r="6" fill="#10b981"/>
+                            <line x1="40" y1="46" x2="40" y2="60" stroke="#6366f1" stroke-width="2"/>
+                            <line x1="75" y1="46" x2="75" y2="60" stroke="#6366f1" stroke-width="2"/>
+                            <line x1="110" y1="46" x2="110" y2="60" stroke="#6366f1" stroke-width="2"/>
+                        </svg>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-semibold text-green-600">✅ Kelebihan:</p>
+                            <p>• Hemat kabel</p>
+                            <p>• Mudah dipasang</p>
+                            <p class="font-semibold text-red-600 mt-2">❌ Kekurangan:</p>
+                            <p>• Collision tinggi</p>
+                            <p>• Sulit troubleshooting</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Ring -->
+                    <div class="bg-purple-50 p-6 rounded-lg card-hover">
+                        <h3 class="font-bold text-purple-800 mb-4 text-center">💍 Topologi Ring</h3>
+                        <svg width="150" height="120" viewBox="0 0 150 120" class="mx-auto mb-4">
+                            <circle cx="75" cy="60" r="30" fill="none" stroke="#3b82f6" stroke-width="3"/>
+                            <circle cx="75" cy="30" r="6" fill="#10b981"/>
+                            <circle cx="105" cy="60" r="6" fill="#10b981"/>
+                            <circle cx="75" cy="90" r="6" fill="#10b981"/>
+                            <circle cx="45" cy="60" r="6" fill="#10b981"/>
+                        </svg>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-semibold text-green-600">✅ Kelebihan:</p>
+                            <p>• Tidak ada collision</p>
+                            <p>• Performa konsisten</p>
+                            <p class="font-semibold text-red-600 mt-2">❌ Kekurangan:</p>
+                            <p>• Satu putus, semua terputus</p>
+                            <p>• Sulit menambah node</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IP Address -->
+        <section id="ip" class="content-section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 card-hover">
+                <div class="flex items-center mb-6">
+                    <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-map-marker-alt text-cyan-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">IP Address</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                            IP Address adalah alamat unik yang diberikan kepada setiap perangkat dalam jaringan untuk identifikasi dan komunikasi.
+                        </p>
+                        
+                        <div class="bg-cyan-50 p-4 rounded-lg mb-4">
+                            <h3 class="font-semibold text-cyan-800 mb-3">📍 Jenis IP Address:</h3>
+                            
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded border-l-4 border-blue-500">
+                                    <h4 class="font-semibold text-blue-700">IPv4</h4>
+                                    <p class="text-sm text-gray-600">Format: 192.168.1.1 (32 bit)</p>
+                                    <p class="text-sm text-gray-600">Contoh: 192.168.0.100</p>
+                                </div>
+                                
+                                <div class="bg-white p-3 rounded border-l-4 border-green-500">
+                                    <h4 class="font-semibold text-green-700">IPv6</h4>
+                                    <p class="text-sm text-gray-600">Format: 2001:db8::1 (128 bit)</p>
+                                    <p class="text-sm text-gray-600">Lebih banyak alamat tersedia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-yellow-800 mb-2">🏠 Kelas IP Address (IPv4):</h3>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li><strong>Kelas A:</strong> 1.0.0.0 - 126.255.255.255</li>
+                                <li><strong>Kelas B:</strong> 128.0.0.0 - 191.255.255.255</li>
+                                <li><strong>Kelas C:</strong> 192.0.0.0 - 223.255.255.255</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h3 class="font-semibold text-gray-800 mb-4 text-center">🌐 Contoh Jaringan IP</h3>
+                            <svg width="250" height="200" viewBox="0 0 250 200" class="mx-auto">
+                                <!-- Router -->
+                                <rect x="100" y="20" width="50" height="30" fill="#4f46e5" rx="5"/>
+                                <text x="125" y="38" text-anchor="middle" fill="white" font-size="10">Router</text>
+                                <text x="125" y="65" text-anchor="middle" fill="#4f46e5" font-size="8">192.168.1.1</text>
+                                
+                                <!-- PC 1 -->
+                                <rect x="20" y="120" width="40" height="25" fill="#10b981" rx="3"/>
+                                <text x="40" y="135" text-anchor="middle" fill="white" font-size="8">PC 1</text>
+                                <text x="40" y="155" text-anchor="middle" fill="#10b981" font-size="7">192.168.1.10</text>
+                                
+                                <!-- PC 2 -->
+                                <rect x="105" y="120" width="40" height="25" fill="#10b981" rx="3"/>
+                                <text x="125" y="135" text-anchor="middle" fill="white" font-size="8">PC 2</text>
+                                <text x="125" y="155" text-anchor="middle" fill="#10b981" font-size="7">192.168.1.11</text>
+                                
+                                <!-- PC 3 -->
+                                <rect x="190" y="120" width="40" height="25" fill="#10b981" rx="3"/>
+                                <text x="210" y="135" text-anchor="middle" fill="white" font-size="8">PC 3</text>
+                                <text x="210" y="155" text-anchor="middle" fill="#10b981" font-size="7">192.168.1.12</text>
+                                
+                                <!-- Connections -->
+                                <line x1="125" y1="50" x2="40" y2="120" stroke="#6366f1" stroke-width="2"/>
+                                <line x1="125" y1="50" x2="125" y2="120" stroke="#6366f1" stroke-width="2"/>
+                                <line x1="125" y1="50" x2="210" y2="120" stroke="#6366f1" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="mt-4 bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">💡 Subnet Mask</h4>
+                            <p class="text-sm text-gray-700">Menentukan bagian network dan host dari IP address</p>
+                            <p class="text-sm text-blue-600 font-mono">Contoh: 255.255.255.0 (/24)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keamanan Jaringan -->
+        <section id="keamanan" class="content-section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 card-hover">
+                <div class="flex items-center mb-6">
+                    <div class="bg-red-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Keamanan Jaringan</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">🛡️ Ancaman Keamanan Jaringan</h3>
+                        <div class="space-y-4">
+                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                                <h4 class="font-semibold text-red-700">Malware</h4>
+                                <p class="text-sm text-gray-600">Virus, worm, trojan yang merusak sistem</p>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                                <h4 class="font-semibold text-orange-700">Phishing</h4>
+                                <p class="text-sm text-gray-600">Penipuan untuk mencuri data pribadi</p>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                                <h4 class="font-semibold text-yellow-700">DDoS Attack</h4>
+                                <p class="text-sm text-gray-600">Serangan untuk melumpuhkan server</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">🔒 Solusi Keamanan</h3>
+                        <div class="space-y-4">
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                                <h4 class="font-semibold text-green-700">Firewall</h4>
+                                <p class="text-sm text-gray-600">Memfilter lalu lintas jaringan masuk dan keluar</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h4 class="font-semibold text-blue-700">Antivirus</h4>
+                                <p class="text-sm text-gray-600">Mendeteksi dan menghapus malware</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                                <h4 class="font-semibold text-purple-700">Enkripsi</h4>
+                                <p class="text-sm text-gray-600">Mengamankan data dengan penyandian</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-gray-800 mb-4 text-center">🔐 Tips Keamanan Jaringan</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>✅ Gunakan password yang kuat</li>
+                            <li>✅ Update sistem secara berkala</li>
+                            <li>✅ Backup data secara rutin</li>
+                        </ul>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>✅ Gunakan VPN untuk koneksi remote</li>
+                            <li>✅ Batasi akses sesuai kebutuhan</li>
+                            <li>✅ Monitor aktivitas jaringan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contoh Soal -->
+    <section id="contoh-soal" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">📝 Contoh Soal dan Pembahasan</h2>
+                <p class="text-gray-600">Latihan soal untuk memahami materi lebih dalam</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Soal 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                        <h3 class="font-bold text-blue-800 mb-2">Soal 1</h3>
+                        <p class="text-gray-700">Sebuah perusahaan memiliki 4 komputer yang ingin dihubungkan dalam satu jaringan. Topologi manakah yang paling cocok jika ingin mudah dalam troubleshooting?</p>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4">
+                        <button class="w-full text-left p-3 rounded border hover:bg-gray-50" onclick="showAnswer(1, 'a', false)">
+                            A. Topologi Bus
+                        </button>
+                        <button class="w-full text-left p-3 rounded border hover:bg-gray-50" onclick="showAnswer(1, 'b', true)">
+                            B. Topologi Star
+                        </button>
+                        <button class="w-full text-left p-3 rounded border hover:bg-gray-50" onclick="showAnswer(1, 'c', false)">
+                            C. Topologi Ring
+                        </button>
+                        <button class="w-full text-left p-3 rounded border hover:bg-gray-50" onclick="showAnswer(1, 'd', false)">
+                            D. Topologi Mesh
+                        </button>
+                    </div>
+                    
+                    <div id="answer1" class="hidden bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-green-800 mb-2">✅ Jawaban: B. Topologi Star</h4>
+                        <p class="text-sm text-gray-700">Topologi star sangat mudah untuk troubleshooting karena setiap komputer terhubung langsung ke switch/hub pusat. Jika ada masalah pada satu komputer, tidak akan mempengaruhi komputer lain.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="bg-green-50 p-4 rounded-lg mb-4">
+                        <h3 class="font-bold text-green-800 mb-2">Soal 2</h3>
+                        <p class="text-gray-700">IP Address 192.168.1.100 dengan subnet mask 255.255.255.0 termasuk dalam kelas berapa?</p>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4">
+                        <button class="w-full text-left p-3 rounded border hover:bg-gray-50" onclick="showAnswer(2, 'a', false)">
+                            A. Kelas A
+                        </button>
+                        <button class="w-full text-left p-3 rounded border hover:bg-gray-50" onclick="showAnswer(2, 'b', false)">
+                            B. Kelas B
+                        </button>
+                        <button class="w-full text-left p-3 rounded border hover:bg-gray-50" onclick="showAnswer(2, 'c', true)">
+                            C. Kelas C
+                        </button>
+                        <button class="w-full text-left p-3 rounded border hover:bg-gray-50" onclick="showAnswer(2, 'd', false)">
+                            D. Kelas D
+                        </button>
+                    </div>
+                    
+                    <div id="answer2" class="hidden bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-green-800 mb-2">✅ Jawaban: C. Kelas C</h4>
+                        <p class="text-sm text-gray-700">IP Address yang dimulai dengan 192 termasuk dalam kelas C (192.0.0.0 - 223.255.255.255). Subnet mask 255.255.255.0 adalah default untuk kelas C.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kuis Interaktif -->
+    <section id="kuis" class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">🎯 Kuis Interaktif</h2>
+                <p class="text-gray-600">Uji pemahaman Anda dengan 10 soal pilihan ganda</p>
+            </div>
+            
+            <!-- Form Data Siswa -->
+            <div id="student-form" class="max-w-md mx-auto bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">📋 Data Siswa</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                        <input type="text" id="student-name" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Masukkan nama lengkap">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Kelas</label>
+                        <select id="student-class" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <option value="">Pilih Kelas</option>
+                            <option value="XII TKJ 1">XII TKJ 1</option>
+                            <option value="XII TKJ 2">XII TKJ 2</option>
+                            <option value="XII RPL 1">XII RPL 1</option>
+                            <option value="XII RPL 2">XII RPL 2</option>
+                        </select>
+                    </div>
+                    <button onclick="startQuiz()" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Mulai Kuis 🚀
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Kuis Container -->
+            <div id="quiz-container" class="hidden max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <!-- Progress Bar -->
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-medium text-gray-700">Progress</span>
+                            <span id="question-counter" class="text-sm font-medium text-gray-700">1/10</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 10%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Question -->
+                    <div id="question-container">
+                        <h3 id="question-text" class="text-xl font-bold text-gray-800 mb-6"></h3>
+                        <div id="options-container" class="space-y-3"></div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <div class="flex justify-between mt-8">
+                        <button id="prev-btn" onclick="previousQuestion()" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors" disabled>
+                            ← Sebelumnya
+                        </button>
+                        <button id="next-btn" onclick="nextQuestion()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors" disabled>
+                            Selanjutnya →
+                        </button>
+                        <button id="finish-btn" onclick="finishQuiz()" class="hidden bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                            Selesai 🎯
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hasil Kuis -->
+            <div id="quiz-result" class="hidden max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 text-center">
+                <div id="result-content"></div>
+                <button onclick="resetQuiz()" class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    Ulangi Kuis 🔄
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Materi Section -->
-    <section id="materi" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Materi Pembelajaran</h2>
-            
-            <!-- Progress Bar -->
-            <div class="max-w-4xl mx-auto mb-8">
-                <div class="bg-gray-200 rounded-full h-3">
-                    <div id="progress-bar" class="bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full progress-bar" style="width: 0%"></div>
-                </div>
-                <p class="text-center mt-2 text-gray-600">Progress Pembelajaran: <span id="progress-text">0%</span></p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Materi 1: Pengertian Jaringan Komputer -->
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover" onclick="openModal('modal1')">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-network-wired text-4xl text-blue-500 mb-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Pengertian Jaringan Komputer</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm">Pelajari definisi dan konsep dasar jaringan komputer</p>
-                    <div class="mt-4 text-center">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Dasar</span>
-                    </div>
-                </div>
-
-                <!-- Materi 2: Jenis Jaringan -->
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover" onclick="openModal('modal2')">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-sitemap text-4xl text-green-500 mb-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Jenis Jaringan Komputer</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm">Mengenal berbagai jenis jaringan: LAN, WAN, MAN</p>
-                    <div class="mt-4 text-center">
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Menengah</span>
-                    </div>
-                </div>
-
-                <!-- Materi 3: Perangkat Jaringan -->
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover" onclick="openModal('modal3')">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-router text-4xl text-purple-500 mb-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Perangkat Jaringan</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm">Router, Switch, Hub, dan perangkat jaringan lainnya</p>
-                    <div class="mt-4 text-center">
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Menengah</span>
-                    </div>
-                </div>
-
-                <!-- Materi 4: Topologi Jaringan -->
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover" onclick="openModal('modal4')">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-project-diagram text-4xl text-red-500 mb-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Topologi Jaringan</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm">Star, Bus, Ring, dan topologi jaringan lainnya</p>
-                    <div class="mt-4 text-center">
-                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">Lanjutan</span>
-                    </div>
-                </div>
-
-                <!-- Materi 5: IP Address -->
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover" onclick="openModal('modal5')">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-address-card text-4xl text-yellow-500 mb-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">IP Address</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm">Memahami alamat IP dan sistem pengalamatan</p>
-                    <div class="mt-4 text-center">
-                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">Lanjutan</span>
-                    </div>
-                </div>
-
-                <!-- Materi 6: Keamanan Jaringan -->
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover" onclick="openModal('modal6')">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-shield-alt text-4xl text-indigo-500 mb-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Keamanan Jaringan</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm">Firewall, enkripsi, dan keamanan jaringan</p>
-                    <div class="mt-4 text-center">
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">Expert</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contoh Soal Section -->
-    <section id="contoh-soal" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Contoh Soal & Pembahasan</h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <div id="example-question" class="mb-6">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Contoh Soal 1</h3>
-                        <p class="text-gray-700 mb-4">Apa yang dimaksud dengan topologi jaringan Star?</p>
-                        
-                        <div class="grid md:grid-cols-2 gap-4 mb-6">
-                            <div>
-                                <p class="font-medium text-gray-800 mb-2">Pilihan Jawaban:</p>
-                                <div class="space-y-2">
-                                    <div class="p-3 bg-gray-50 rounded-lg">A. Semua komputer terhubung dalam bentuk lingkaran</div>
-                                    <div class="p-3 bg-green-100 border-2 border-green-500 rounded-lg">B. Semua komputer terhubung ke satu titik pusat</div>
-                                    <div class="p-3 bg-gray-50 rounded-lg">C. Komputer terhubung dalam satu garis lurus</div>
-                                    <div class="p-3 bg-gray-50 rounded-lg">D. Setiap komputer terhubung ke semua komputer lain</div>
-                                </div>
-                            </div>
-                            
-                            <div class="flex justify-center items-center">
-                                <svg width="200" height="150" viewBox="0 0 200 150">
-                                    <!-- Star Topology Illustration -->
-                                    <circle cx="100" cy="75" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="3"/>
-                                    <text x="100" y="80" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Hub</text>
-                                    
-                                    <circle cx="50" cy="30" r="10" fill="#3b82f6"/>
-                                    <circle cx="150" cy="30" r="10" fill="#3b82f6"/>
-                                    <circle cx="50" cy="120" r="10" fill="#3b82f6"/>
-                                    <circle cx="150" cy="120" r="10" fill="#3b82f6"/>
-                                    
-                                    <line x1="90" y1="65" x2="60" y2="40" stroke="#10b981" stroke-width="2"/>
-                                    <line x1="110" y1="65" x2="140" y2="40" stroke="#10b981" stroke-width="2"/>
-                                    <line x1="90" y1="85" x2="60" y2="110" stroke="#10b981" stroke-width="2"/>
-                                    <line x1="110" y1="85" x2="140" y2="110" stroke="#10b981" stroke-width="2"/>
-                                </svg>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-green-50 border-l-4 border-green-500 p-4">
-                            <h4 class="font-semibold text-green-800 mb-2">Pembahasan:</h4>
-                            <p class="text-green-700">Jawaban yang benar adalah <strong>B</strong>. Topologi Star adalah konfigurasi jaringan dimana semua komputer atau perangkat terhubung ke satu titik pusat (hub atau switch). Keuntungannya adalah jika satu komputer bermasalah, tidak akan mempengaruhi komputer lain.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <button onclick="nextExample()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                            Contoh Soal Berikutnya <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kuis Section -->
-    <section id="kuis" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Kuis Interaktif</h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <!-- Student Info Form -->
-                <div id="student-form" class="bg-white rounded-xl shadow-lg p-8 mb-8">
-                    <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">Informasi Siswa</h3>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Nama Lengkap</label>
-                            <input type="text" id="student-name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Masukkan nama lengkap">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Kelas</label>
-                            <select id="student-class" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option value="">Pilih Kelas</option>
-                                <option value="XII TKJ 1">XII TKJ 1</option>
-                                <option value="XII TKJ 2">XII TKJ 2</option>
-                                <option value="XII RPL 1">XII RPL 1</option>
-                                <option value="XII RPL 2">XII RPL 2</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="text-center mt-6">
-                        <button onclick="startQuiz()" class="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
-                            Mulai Kuis <i class="fas fa-play ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Quiz Container -->
-                <div id="quiz-container" class="bg-white rounded-xl shadow-lg p-8 hidden">
-                    <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-xl font-semibold text-gray-800">Kuis Komputer & Jaringan</h3>
-                        <div class="text-right">
-                            <p class="text-sm text-gray-600">Soal <span id="current-question">1</span> dari <span id="total-questions">10</span></p>
-                            <div class="w-32 bg-gray-200 rounded-full h-2 mt-1">
-                                <div id="quiz-progress" class="bg-blue-500 h-2 rounded-full transition-all duration-300" style="width: 10%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="question-container">
-                        <!-- Questions will be loaded here -->
-                    </div>
-                    
-                    <div class="flex justify-between mt-8">
-                        <button id="prev-btn" onclick="previousQuestion()" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors hidden">
-                            <i class="fas fa-arrow-left mr-2"></i> Sebelumnya
-                        </button>
-                        <button id="next-btn" onclick="nextQuestion()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors ml-auto">
-                            Selanjutnya <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                        <button id="submit-btn" onclick="submitQuiz()" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors ml-auto hidden">
-                            Selesai <i class="fas fa-check ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Results -->
-                <div id="quiz-results" class="bg-white rounded-xl shadow-lg p-8 hidden">
-                    <div class="text-center">
-                        <i class="fas fa-trophy text-6xl text-yellow-500 mb-4"></i>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Kuis Selesai!</h3>
-                        <div class="text-6xl font-bold mb-4" id="final-score">0</div>
-                        <p class="text-xl text-gray-600 mb-6" id="score-message">Selamat!</p>
-                        
-                        <div class="grid md:grid-cols-3 gap-4 mb-8">
-                            <div class="bg-green-100 p-4 rounded-lg">
-                                <i class="fas fa-check-circle text-2xl text-green-600 mb-2"></i>
-                                <p class="text-green-800 font-semibold">Benar</p>
-                                <p class="text-2xl font-bold text-green-600" id="correct-count">0</p>
-                            </div>
-                            <div class="bg-red-100 p-4 rounded-lg">
-                                <i class="fas fa-times-circle text-2xl text-red-600 mb-2"></i>
-                                <p class="text-red-800 font-semibold">Salah</p>
-                                <p class="text-2xl font-bold text-red-600" id="incorrect-count">0</p>
-                            </div>
-                            <div class="bg-blue-100 p-4 rounded-lg">
-                                <i class="fas fa-clock text-2xl text-blue-600 mb-2"></i>
-                                <p class="text-blue-800 font-semibold">Waktu</p>
-                                <p class="text-2xl font-bold text-blue-600" id="time-taken">0:00</p>
-                            </div>
-                        </div>
-                        
-                        <div class="space-y-2">
-                            <button onclick="reviewAnswers()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors mr-4">
-                                <i class="fas fa-eye mr-2"></i> Lihat Pembahasan
-                            </button>
-                            <button onclick="restartQuiz()" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                                <i class="fas fa-redo mr-2"></i> Ulangi Kuis
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Answer Review -->
-                <div id="answer-review" class="bg-white rounded-xl shadow-lg p-8 hidden">
-                    <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">Pembahasan Jawaban</h3>
-                    <div id="review-content">
-                        <!-- Review content will be loaded here -->
-                    </div>
-                    <div class="text-center mt-6">
-                        <button onclick="backToResults()" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors">
-                            <i class="fas fa-arrow-left mr-2"></i> Kembali ke Hasil
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modals for Learning Materials -->
-    <!-- Modal 1: Pengertian Jaringan Komputer -->
-    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-800">Pengertian Jaringan Komputer</h3>
-                    <button onclick="closeModal('modal1')" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times text-2xl"></i>
-                    </button>
-                </div>
-                
-                <div class="space-y-6">
-                    <div class="bg-blue-50 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold text-blue-800 mb-3">Definisi</h4>
-                        <p class="text-gray-700 leading-relaxed">
-                            Jaringan komputer adalah kumpulan dua atau lebih komputer yang saling terhubung untuk berbagi sumber daya seperti data, aplikasi, dan perangkat keras. Jaringan memungkinkan komunikasi dan pertukaran informasi antar komputer.
-                        </p>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <h4 class="text-lg font-semibold text-gray-800 mb-3">Manfaat Jaringan Komputer:</h4>
-                            <ul class="space-y-2 text-gray-700">
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Berbagi file dan data</li>
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Berbagi perangkat keras</li>
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Komunikasi antar pengguna</li>
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Akses internet bersama</li>
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Backup data terpusat</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="flex justify-center">
-                            <svg width="250" height="200" viewBox="0 0 250 200">
-                                <!-- Simple Network Illustration -->
-                                <rect x="100" y="80" width="50" height="40" fill="#3b82f6" rx="5"/>
-                                <text x="125" y="105" text-anchor="middle" fill="white" font-size="12">Server</text>
-                                
-                                <rect x="20" y="20" width="40" height="30" fill="#10b981" rx="3"/>
-                                <text x="40" y="40" text-anchor="middle" fill="white" font-size="10">PC 1</text>
-                                
-                                <rect x="190" y="20" width="40" height="30" fill="#10b981" rx="3"/>
-                                <text x="210" y="40" text-anchor="middle" fill="white" font-size="10">PC 2</text>
-                                
-                                <rect x="20" y="150" width="40" height="30" fill="#10b981" rx="3"/>
-                                <text x="40" y="170" text-anchor="middle" fill="white" font-size="10">PC 3</text>
-                                
-                                <rect x="190" y="150" width="40" height="30" fill="#10b981" rx="3"/>
-                                <text x="210" y="170" text-anchor="middle" fill="white" font-size="10">PC 4</text>
-                                
-                                <!-- Connections -->
-                                <line x1="100" y1="90" x2="60" y2="45" stroke="#f59e0b" stroke-width="2"/>
-                                <line x1="150" y1="90" x2="190" y2="45" stroke="#f59e0b" stroke-width="2"/>
-                                <line x1="100" y1="110" x2="60" y2="155" stroke="#f59e0b" stroke-width="2"/>
-                                <line x1="150" y1="110" x2="190" y2="155" stroke="#f59e0b" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-yellow-50 p-4 rounded-lg">
-                        <h4 class="text-lg font-semibold text-yellow-800 mb-2">💡 Contoh dalam Kehidupan Sehari-hari:</h4>
-                        <p class="text-gray-700">
-                            Warnet, lab komputer sekolah, kantor dengan banyak komputer yang terhubung, dan bahkan WiFi di rumah adalah contoh jaringan komputer yang sering kita jumpai.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="mt-6 text-center">
-                    <button onclick="markAsRead('modal1')" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                        <i class="fas fa-check mr-2"></i> Tandai Sudah Dibaca
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 2: Jenis Jaringan Komputer -->
-    <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-800">Jenis Jaringan Komputer</h3>
-                    <button onclick="closeModal('modal2')" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times text-2xl"></i>
-                    </button>
-                </div>
-                
-                <div class="space-y-6">
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <!-- LAN -->
-                        <div class="bg-green-50 p-6 rounded-lg">
-                            <div class="text-center mb-4">
-                                <i class="fas fa-home text-3xl text-green-600 mb-2"></i>
-                                <h4 class="text-xl font-semibold text-green-800">LAN</h4>
-                                <p class="text-sm text-green-600">Local Area Network</p>
-                            </div>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• Jangkauan: 1 gedung/area</li>
-                                <li>• Kecepatan: Sangat tinggi</li>
-                                <li>• Contoh: Lab sekolah, kantor</li>
-                                <li>• Biaya: Murah</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- MAN -->
-                        <div class="bg-blue-50 p-6 rounded-lg">
-                            <div class="text-center mb-4">
-                                <i class="fas fa-city text-3xl text-blue-600 mb-2"></i>
-                                <h4 class="text-xl font-semibold text-blue-800">MAN</h4>
-                                <p class="text-sm text-blue-600">Metropolitan Area Network</p>
-                            </div>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• Jangkauan: 1 kota</li>
-                                <li>• Kecepatan: Tinggi</li>
-                                <li>• Contoh: Jaringan kampus</li>
-                                <li>• Biaya: Sedang</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- WAN -->
-                        <div class="bg-purple-50 p-6 rounded-lg">
-                            <div class="text-center mb-4">
-                                <i class="fas fa-globe text-3xl text-purple-600 mb-2"></i>
-                                <h4 class="text-xl font-semibold text-purple-800">WAN</h4>
-                                <p class="text-sm text-purple-600">Wide Area Network</p>
-                            </div>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• Jangkauan: Antar negara</li>
-                                <li>• Kecepatan: Bervariasi</li>
-                                <li>• Contoh: Internet</li>
-                                <li>• Biaya: Mahal</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Perbandingan Jenis Jaringan</h4>
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-sm">
-                                <thead>
-                                    <tr class="bg-gray-200">
-                                        <th class="p-2 text-left">Aspek</th>
-                                        <th class="p-2 text-center">LAN</th>
-                                        <th class="p-2 text-center">MAN</th>
-                                        <th class="p-2 text-center">WAN</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="p-2 font-medium">Jangkauan</td>
-                                        <td class="p-2 text-center">< 1 km</td>
-                                        <td class="p-2 text-center">1-100 km</td>
-                                        <td class="p-2 text-center">> 100 km</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="p-2 font-medium">Kecepatan</td>
-                                        <td class="p-2 text-center">10-1000 Mbps</td>
-                                        <td class="p-2 text-center">1-100 Mbps</td>
-                                        <td class="p-2 text-center">1-100 Mbps</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2 font-medium">Kepemilikan</td>
-                                        <td class="p-2 text-center">Pribadi</td>
-                                        <td class="p-2 text-center">Pribadi/Publik</td>
-                                        <td class="p-2 text-center">Publik</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-6 text-center">
-                    <button onclick="markAsRead('modal2')" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                        <i class="fas fa-check mr-2"></i> Tandai Sudah Dibaca
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 3: Perangkat Jaringan -->
-    <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-800">Perangkat Jaringan</h3>
-                    <button onclick="closeModal('modal3')" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times text-2xl"></i>
-                    </button>
-                </div>
-                
-                <div class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <!-- Router -->
-                        <div class="bg-blue-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-router text-3xl text-blue-600 mr-3"></i>
-                                <h4 class="text-xl font-semibold text-blue-800">Router</h4>
-                            </div>
-                            <p class="text-gray-700 mb-3">Menghubungkan beberapa jaringan dan menentukan jalur terbaik untuk pengiriman data.</p>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Bekerja di layer 3 (Network)</li>
-                                <li>• Memiliki tabel routing</li>
-                                <li>• Dapat menghubungkan LAN ke WAN</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Switch -->
-                        <div class="bg-green-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-network-wired text-3xl text-green-600 mr-3"></i>
-                                <h4 class="text-xl font-semibold text-green-800">Switch</h4>
-                            </div>
-                            <p class="text-gray-700 mb-3">Menghubungkan perangkat dalam satu jaringan lokal dan meneruskan data berdasarkan MAC address.</p>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Bekerja di layer 2 (Data Link)</li>
-                                <li>• Memiliki MAC address table</li>
-                                <li>• Mengurangi collision domain</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Hub -->
-                        <div class="bg-yellow-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-circle-nodes text-3xl text-yellow-600 mr-3"></i>
-                                <h4 class="text-xl font-semibold text-yellow-800">Hub</h4>
-                            </div>
-                            <p class="text-gray-700 mb-3">Perangkat sederhana yang menghubungkan beberapa perangkat dalam satu collision domain.</p>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Bekerja di layer 1 (Physical)</li>
-                                <li>• Mengirim data ke semua port</li>
-                                <li>• Sudah jarang digunakan</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Access Point -->
-                        <div class="bg-purple-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-wifi text-3xl text-purple-600 mr-3"></i>
-                                <h4 class="text-xl font-semibold text-purple-800">Access Point</h4>
-                            </div>
-                            <p class="text-gray-700 mb-3">Menyediakan akses nirkabel ke jaringan kabel untuk perangkat WiFi.</p>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Mengubah sinyal kabel ke nirkabel</li>
-                                <li>• Memiliki SSID dan password</li>
-                                <li>• Mendukung multiple device</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Perbedaan Hub vs Switch</h4>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <h5 class="font-medium text-red-600 mb-2">Hub (Collision Domain Besar)</h5>
-                                <svg width="200" height="120" viewBox="0 0 200 120">
-                                    <circle cx="100" cy="60" r="15" fill="#ef4444"/>
-                                    <text x="100" y="65" text-anchor="middle" fill="white" font-size="10">HUB</text>
-                                    
-                                    <circle cx="50" cy="30" r="8" fill="#3b82f6"/>
-                                    <circle cx="150" cy="30" r="8" fill="#3b82f6"/>
-                                    <circle cx="50" cy="90" r="8" fill="#3b82f6"/>
-                                    <circle cx="150" cy="90" r="8" fill="#3b82f6"/>
-                                    
-                                    <line x1="85" y1="50" x2="58" y2="38" stroke="#ef4444" stroke-width="2"/>
-                                    <line x1="115" y1="50" x2="142" y2="38" stroke="#ef4444" stroke-width="2"/>
-                                    <line x1="85" y1="70" x2="58" y2="82" stroke="#ef4444" stroke-width="2"/>
-                                    <line x1="115" y1="70" x2="142" y2="82" stroke="#ef4444" stroke-width="2"/>
-                                    
-                                    <text x="100" y="110" text-anchor="middle" fill="#ef4444" font-size="10">Data ke semua port</text>
-                                </svg>
-                            </div>
-                            <div>
-                                <h5 class="font-medium text-green-600 mb-2">Switch (Collision Domain Kecil)</h5>
-                                <svg width="200" height="120" viewBox="0 0 200 120">
-                                    <circle cx="100" cy="60" r="15" fill="#10b981"/>
-                                    <text x="100" y="65" text-anchor="middle" fill="white" font-size="9">SWITCH</text>
-                                    
-                                    <circle cx="50" cy="30" r="8" fill="#3b82f6"/>
-                                    <circle cx="150" cy="30" r="8" fill="#3b82f6"/>
-                                    <circle cx="50" cy="90" r="8" fill="#3b82f6"/>
-                                    <circle cx="150" cy="90" r="8" fill="#3b82f6"/>
-                                    
-                                    <line x1="85" y1="50" x2="58" y2="38" stroke="#10b981" stroke-width="3"/>
-                                    <line x1="115" y1="50" x2="142" y2="38" stroke="#d1d5db" stroke-width="1"/>
-                                    <line x1="85" y1="70" x2="58" y2="82" stroke="#d1d5db" stroke-width="1"/>
-                                    <line x1="115" y1="70" x2="142" y2="82" stroke="#d1d5db" stroke-width="1"/>
-                                    
-                                    <text x="100" y="110" text-anchor="middle" fill="#10b981" font-size="10">Data ke port tujuan</text>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-6 text-center">
-                    <button onclick="markAsRead('modal3')" class="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-600 transition-colors">
-                        <i class="fas fa-check mr-2"></i> Tandai Sudah Dibaca
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 4: Topologi Jaringan -->
-    <div id="modal4" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-800">Topologi Jaringan</h3>
-                    <button onclick="closeModal('modal4')" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times text-2xl"></i>
-                    </button>
-                </div>
-                
-                <div class="space-y-8">
-                    <!-- Star Topology -->
-                    <div class="bg-yellow-50 p-6 rounded-lg">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-xl font-semibold text-yellow-800 mb-3">Topologi Star (Bintang)</h4>
-                                <p class="text-gray-700 mb-4">Semua perangkat terhubung ke satu titik pusat (hub/switch).</p>
-                                <div class="space-y-2">
-                                    <p class="text-sm"><span class="text-green-600 font-medium">Kelebihan:</span> Mudah troubleshooting, jika satu PC rusak tidak mempengaruhi yang lain</p>
-                                    <p class="text-sm"><span class="text-red-600 font-medium">Kekurangan:</span> Jika hub rusak, seluruh jaringan mati</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-center">
-                                <svg width="200" height="150" viewBox="0 0 200 150">
-                                    <circle cx="100" cy="75" r="15" fill="#fbbf24"/>
-                                    <text x="100" y="80" text-anchor="middle" fill="white" font-size="10" font-weight="bold">HUB</text>
-                                    
-                                    <circle cx="50" cy="30" r="10" fill="#3b82f6"/>
-                                    <circle cx="150" cy="30" r="10" fill="#3b82f6"/>
-                                    <circle cx="50" cy="120" r="10" fill="#3b82f6"/>
-                                    <circle cx="150" cy="120" r="10" fill="#3b82f6"/>
-                                    
-                                    <line x1="90" y1="65" x2="60" y2="40" stroke="#10b981" stroke-width="2"/>
-                                    <line x1="110" y1="65" x2="140" y2="40" stroke="#10b981" stroke-width="2"/>
-                                    <line x1="90" y1="85" x2="60" y2="110" stroke="#10b981" stroke-width="2"/>
-                                    <line x1="110" y1="85" x2="140" y2="110" stroke="#10b981" stroke-width="2"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Bus Topology -->
-                    <div class="bg-blue-50 p-6 rounded-lg">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-xl font-semibold text-blue-800 mb-3">Topologi Bus</h4>
-                                <p class="text-gray-700 mb-4">Semua perangkat terhubung pada satu kabel utama (backbone).</p>
-                                <div class="space-y-2">
-                                    <p class="text-sm"><span class="text-green-600 font-medium">Kelebihan:</span> Hemat kabel, mudah dipasang</p>
-                                    <p class="text-sm"><span class="text-red-600 font-medium">Kekurangan:</span> Jika kabel utama putus, seluruh jaringan mati</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-center items-center">
-                                <svg width="200" height="100" viewBox="0 0 200 100">
-                                    <line x1="20" y1="50" x2="180" y2="50" stroke="#3b82f6" stroke-width="4"/>
-                                    
-                                    <circle cx="50" cy="50" r="8" fill="#10b981"/>
-                                    <circle cx="100" cy="50" r="8" fill="#10b981"/>
-                                    <circle cx="150" cy="50" r="8" fill="#10b981"/>
-                                    
-                                    <circle cx="20" cy="50" r="5" fill="#ef4444"/>
-                                    <circle cx="180" cy="50" r="5" fill="#ef4444"/>
-                                    
-                                    <text x="100" y="75" text-anchor="middle" fill="#3b82f6" font-size="10">Backbone Cable</text>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Ring Topology -->
-                    <div class="bg-green-50 p-6 rounded-lg">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-xl font-semibold text-green-800 mb-3">Topologi Ring (Cincin)</h4>
-                                <p class="text-gray-700 mb-4">Setiap perangkat terhubung membentuk lingkaran tertutup.</p>
-                                <div class="space-y-2">
-                                    <p class="text-sm"><span class="text-green-600 font-medium">Kelebihan:</span> Data mengalir satu arah, tidak ada collision</p>
-                                    <p class="text-sm"><span class="text-red-600 font-medium">Kekurangan:</span> Jika satu PC rusak, seluruh jaringan terganggu</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-center items-center">
-                                <svg width="150" height="150" viewBox="0 0 150 150">
-                                    <circle cx="75" cy="75" r="50" fill="none" stroke="#10b981" stroke-width="3"/>
-                                    
-                                    <circle cx="75" cy="25" r="8" fill="#3b82f6"/>
-                                    <circle cx="125" cy="75" r="8" fill="#3b82f6"/>
-                                    <circle cx="75" cy="125" r="8" fill="#3b82f6"/>
-                                    <circle cx="25" cy="75" r="8" fill="#3b82f6"/>
-                                    
-                                    <!-- Arrows to show direction -->
-                                    <polygon points="90,35 95,30 95,40" fill="#ef4444"/>
-                                    <polygon points="115,90 120,85 120,95" fill="#ef4444"/>
-                                    <polygon points="60,115 55,120 55,110" fill="#ef4444"/>
-                                    <polygon points="35,60 30,65 30,55" fill="#ef4444"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Mesh Topology -->
-                    <div class="bg-purple-50 p-6 rounded-lg">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-xl font-semibold text-purple-800 mb-3">Topologi Mesh</h4>
-                                <p class="text-gray-700 mb-4">Setiap perangkat terhubung langsung ke semua perangkat lain.</p>
-                                <div class="space-y-2">
-                                    <p class="text-sm"><span class="text-green-600 font-medium">Kelebihan:</span> Sangat reliable, banyak jalur alternatif</p>
-                                    <p class="text-sm"><span class="text-red-600 font-medium">Kekurangan:</span> Mahal, banyak kabel diperlukan</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-center items-center">
-                                <svg width="150" height="150" viewBox="0 0 150 150">
-                                    <circle cx="40" cy="40" r="8" fill="#3b82f6"/>
-                                    <circle cx="110" cy="40" r="8" fill="#3b82f6"/>
-                                    <circle cx="40" cy="110" r="8" fill="#3b82f6"/>
-                                    <circle cx="110" cy="110" r="8" fill="#3b82f6"/>
-                                    
-                                    <!-- All connections -->
-                                    <line x1="40" y1="40" x2="110" y2="40" stroke="#8b5cf6" stroke-width="2"/>
-                                    <line x1="40" y1="40" x2="40" y2="110" stroke="#8b5cf6" stroke-width="2"/>
-                                    <line x1="40" y1="40" x2="110" y2="110" stroke="#8b5cf6" stroke-width="2"/>
-                                    <line x1="110" y1="40" x2="110" y2="110" stroke="#8b5cf6" stroke-width="2"/>
-                                    <line x1="110" y1="40" x2="40" y2="110" stroke="#8b5cf6" stroke-width="2"/>
-                                    <line x1="40" y1="110" x2="110" y2="110" stroke="#8b5cf6" stroke-width="2"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-6 text-center">
-                    <button onclick="markAsRead('modal4')" class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition-colors">
-                        <i class="fas fa-check mr-2"></i> Tandai Sudah Dibaca
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 5: IP Address -->
-    <div id="modal5" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-800">IP Address</h3>
-                    <button onclick="closeModal('modal5')" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times text-2xl"></i>
-                    </button>
-                </div>
-                
-                <div class="space-y-6">
-                    <div class="bg-yellow-50 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold text-yellow-800 mb-3">Apa itu IP Address?</h4>
-                        <p class="text-gray-700 leading-relaxed">
-                            IP Address (Internet Protocol Address) adalah alamat unik yang diberikan kepada setiap perangkat dalam jaringan untuk identifikasi dan komunikasi. Seperti alamat rumah, IP address membantu data menemukan tujuannya.
-                        </p>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <!-- IPv4 -->
-                        <div class="bg-blue-50 p-6 rounded-lg">
-                            <h4 class="text-lg font-semibold text-blue-800 mb-3">IPv4</h4>
-                            <div class="space-y-3">
-                                <p class="text-gray-700">Format: 4 oktet (0-255) dipisahkan titik</p>
-                                <div class="bg-white p-3 rounded border">
-                                    <p class="font-mono text-center text-lg">192.168.1.1</p>
-                                </div>
-                                <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• Total: 4.3 miliar alamat</li>
-                                    <li>• Panjang: 32 bit</li>
-                                    <li>• Contoh: 192.168.0.1</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- IPv6 -->
-                        <div class="bg-green-50 p-6 rounded-lg">
-                            <h4 class="text-lg font-semibold text-green-800 mb-3">IPv6</h4>
-                            <div class="space-y-3">
-                                <p class="text-gray-700">Format: 8 grup heksadesimal dipisahkan titik dua</p>
-                                <div class="bg-white p-3 rounded border">
-                                    <p class="font-mono text-center text-sm">2001:0db8:85a3::8a2e:0370:7334</p>
-                                </div>
-                                <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• Total: 340 undecillion alamat</li>
-                                    <li>• Panjang: 128 bit</li>
-                                    <li>• Menggantikan IPv4</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-purple-50 p-6 rounded-lg">
-                        <h4 class="text-lg font-semibold text-purple-800 mb-4">Kelas IP Address (IPv4)</h4>
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-sm">
-                                <thead>
-                                    <tr class="bg-purple-200">
-                                        <th class="p-2 text-left">Kelas</th>
-                                        <th class="p-2 text-left">Range</th>
-                                        <th class="p-2 text-left">Subnet Mask</th>
-                                        <th class="p-2 text-left">Penggunaan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="p-2 font-medium">A</td>
-                                        <td class="p-2 font-mono">1.0.0.0 - 126.255.255.255</td>
-                                        <td class="p-2 font-mono">255.0.0.0</td>
-                                        <td class="p-2">Jaringan besar</td>
-                                    </tr>
-                                    <tr class="bg-purple-50">
-                                        <td class="p-2 font-medium">B</td>
-                                        <td class="p-2 font-mono">128.0.0.0 - 191.255.255.255</td>
-                                        <td class="p-2 font-mono">255.255.0.0</td>
-                                        <td class="p-2">Jaringan menengah</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2 font-medium">C</td>
-                                        <td class="p-2 font-mono">192.0.0.0 - 223.255.255.255</td>
-                                        <td class="p-2 font-mono">255.255.255.0</td>
-                                        <td class="p-2">Jaringan kecil</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-red-50 p-4 rounded-lg">
-                            <h5 class="font-semibold text-red-800 mb-2">IP Private</h5>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• 10.0.0.0 - 10.255.255.255</li>
-                                <li>• 172.16.0.0 - 172.31.255.255</li>
-                                <li>• 192.168.0.0 - 192.168.255.255</li>
-                                <li class="text-red-600">Tidak bisa diakses dari internet</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="bg-green-50 p-4 rounded-lg">
-                            <h5 class="font-semibold text-green-800 mb-2">IP Public</h5>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• Alamat yang dapat diakses internet</li>
-                                <li>• Unik di seluruh dunia</li>
-                                <li>• Disediakan oleh ISP</li>
-                                <li class="text-green-600">Contoh: 8.8.8.8 (Google DNS)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-6 text-center">
-                    <button onclick="markAsRead('modal5')" class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-600 transition-colors">
-                        <i class="fas fa-check mr-2"></i> Tandai Sudah Dibaca
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 6: Keamanan Jaringan -->
-    <div id="modal6" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-800">Keamanan Jaringan</h3>
-                    <button onclick="closeModal('modal6')" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times text-2xl"></i>
-                    </button>
-                </div>
-                
-                <div class="space-y-6">
-                    <div class="bg-red-50 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold text-red-800 mb-3">Mengapa Keamanan Jaringan Penting?</h4>
-                        <p class="text-gray-700 leading-relaxed">
-                            Keamanan jaringan melindungi data, sistem, dan pengguna dari ancaman cyber seperti virus, hacker, dan pencurian data. Tanpa keamanan yang baik, informasi pribadi dan bisnis bisa disalahgunakan.
-                        </p>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <!-- Firewall -->
-                        <div class="bg-blue-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-shield-alt text-3xl text-blue-600 mr-3"></i>
-                                <h4 class="text-lg font-semibold text-blue-800">Firewall</h4>
-                            </div>
-                            <p class="text-gray-700 mb-3">Sistem keamanan yang mengontrol lalu lintas jaringan masuk dan keluar berdasarkan aturan keamanan.</p>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Memblokir akses tidak sah</li>
-                                <li>• Memfilter paket data</li>
-                                <li>• Mencatat aktivitas jaringan</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Antivirus -->
-                        <div class="bg-green-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-bug text-3xl text-green-600 mr-3"></i>
-                                <h4 class="text-lg font-semibold text-green-800">Antivirus</h4>
-                            </div>
-                            <p class="text-gray-700 mb-3">Software yang mendeteksi, mencegah, dan menghapus malware dari sistem komputer.</p>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Scan file secara real-time</li>
-                                <li>• Update database virus</li>
-                                <li>• Karantina file berbahaya</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Enkripsi -->
-                        <div class="bg-purple-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-lock text-3xl text-purple-600 mr-3"></i>
-                                <h4 class="text-lg font-semibold text-purple-800">Enkripsi</h4>
-                            </div>
-                            <p class="text-gray-700 mb-3">Proses mengubah data menjadi kode rahasia yang hanya bisa dibaca dengan kunci dekripsi.</p>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Melindungi data sensitif</li>
-                                <li>• Menggunakan algoritma kompleks</li>
-                                <li>• Contoh: HTTPS, WPA2</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- VPN -->
-                        <div class="bg-yellow-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-user-secret text-3xl text-yellow-600 mr-3"></i>
-                                <h4 class="text-lg font-semibold text-yellow-800">VPN</h4>
-                            </div>
-                            <p class="text-gray-700 mb-3">Virtual Private Network yang membuat koneksi aman melalui jaringan publik.</p>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Menyembunyikan IP address</li>
-                                <li>• Enkripsi data transmisi</li>
-                                <li>• Akses jaringan remote</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Ancaman Keamanan Jaringan</h4>
-                        <div class="grid md:grid-cols-3 gap-4">
-                            <div class="text-center p-4 bg-white rounded-lg">
-                                <i class="fas fa-virus text-2xl text-red-500 mb-2"></i>
-                                <h5 class="font-medium text-red-700">Malware</h5>
-                                <p class="text-xs text-gray-600">Virus, worm, trojan</p>
-                            </div>
-                            <div class="text-center p-4 bg-white rounded-lg">
-                                <i class="fas fa-user-ninja text-2xl text-purple-500 mb-2"></i>
-                                <h5 class="font-medium text-purple-700">Hacking</h5>
-                                <p class="text-xs text-gray-600">Akses tidak sah</p>
-                            </div>
-                            <div class="text-center p-4 bg-white rounded-lg">
-                                <i class="fas fa-fish text-2xl text-blue-500 mb-2"></i>
-                                <h5 class="font-medium text-blue-700">Phishing</h5>
-                                <p class="text-xs text-gray-600">Penipuan online</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-green-50 p-6 rounded-lg">
-                        <h4 class="text-lg font-semibold text-green-800 mb-3">Tips Keamanan Jaringan</h4>
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <ul class="space-y-2 text-sm text-gray-700">
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Gunakan password yang kuat</li>
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Update software secara rutin</li>
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Aktifkan firewall</li>
-                            </ul>
-                            <ul class="space-y-2 text-sm text-gray-700">
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Backup data secara berkala</li>
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Hati-hati dengan email mencurigakan</li>
-                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Gunakan antivirus terpercaya</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-6 text-center">
-                    <button onclick="markAsRead('modal6')" class="bg-indigo-500 text-white px-6 py-2 rounded-lg hover:bg-indigo-600 transition-colors">
-                        <i class="fas fa-check mr-2"></i> Tandai Sudah Dibaca
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="gradient-bg text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            <div class="flex justify-center items-center space-x-3 mb-4">
-                <i class="fas fa-network-wired text-2xl"></i>
-                <h3 class="text-xl font-semibold">Pembelajaran Komputer & Jaringan</h3>
+            <div class="flex items-center justify-center mb-4">
+                <i class="fas fa-graduation-cap text-2xl mr-3"></i>
+                <h3 class="text-xl font-bold">Pembelajaran Komputer dan Jaringan</h3>
             </div>
-            <p class="text-gray-200 mb-4">SMK Kelas 12 - Materi Interaktif</p>
+            <p class="text-blue-100 mb-4">Website pembelajaran interaktif untuk siswa SMK Kelas 12</p>
             <div class="flex justify-center space-x-6 text-sm">
-                <span>© 2024 Pembelajaran Interaktif</span>
-                <span>•</span>
-                <span>Dibuat dengan ❤️ untuk siswa SMK</span>
+                <span>📚 Materi Lengkap</span>
+                <span>🎯 Kuis Interaktif</span>
+                <span>📊 Penilaian Otomatis</span>
             </div>
         </div>
     </footer>
 
     <script>
-        // Global variables
-        let currentQuestionIndex = 0;
-        let userAnswers = [];
-        let quizStartTime = null;
-        let readMaterials = new Set();
-        let currentExampleIndex = 0;
-        
-        // Quiz questions
+        // Navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+            
+            // Update navigation buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-500', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            
+            event.target.classList.remove('bg-gray-200', 'text-gray-700');
+            event.target.classList.add('bg-blue-500', 'text-white');
+        }
+
+        // Example answers
+        function showAnswer(questionNum, option, isCorrect) {
+            const answerDiv = document.getElementById(`answer${questionNum}`);
+            answerDiv.classList.remove('hidden');
+            
+            // Reset all buttons
+            const buttons = answerDiv.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.classList.remove('quiz-correct', 'quiz-incorrect');
+            });
+            
+            // Highlight selected answer
+            event.target.classList.add(isCorrect ? 'quiz-correct' : 'quiz-incorrect');
+        }
+
+        // Quiz Data
         const quizQuestions = [
             {
                 question: "Apa yang dimaksud dengan jaringan komputer?",
                 options: [
                     "Kumpulan komputer yang berdiri sendiri",
                     "Kumpulan komputer yang saling terhubung untuk berbagi sumber daya",
-                    "Software untuk menghubungkan komputer",
-                    "Hardware untuk mempercepat komputer"
+                    "Program untuk menghubungkan komputer",
+                    "Perangkat keras komputer"
                 ],
                 correct: 1,
-                explanation: "Jaringan komputer adalah kumpulan dua atau lebih komputer yang saling terhubung untuk berbagi sumber daya seperti data, aplikasi, dan perangkat keras."
+                explanation: "Jaringan komputer adalah kumpulan dua atau lebih komputer yang saling terhubung untuk berbagi data, informasi, dan sumber daya."
             },
             {
                 question: "Jenis jaringan yang mencakup area satu kota disebut?",
                 options: ["LAN", "MAN", "WAN", "PAN"],
                 correct: 1,
-                explanation: "MAN (Metropolitan Area Network) adalah jaringan yang mencakup area geografis satu kota atau metropolitan."
+                explanation: "MAN (Metropolitan Area Network) adalah jaringan yang mencakup area satu kota atau metropolitan."
             },
             {
-                question: "Perangkat yang berfungsi menghubungkan beberapa jaringan dan menentukan jalur terbaik untuk data adalah?",
+                question: "Perangkat yang berfungsi menghubungkan berbagai jaringan adalah?",
                 options: ["Hub", "Switch", "Router", "Bridge"],
                 correct: 2,
-                explanation: "Router berfungsi menghubungkan beberapa jaringan dan menentukan jalur terbaik (routing) untuk pengiriman data antar jaringan."
+                explanation: "Router berfungsi menghubungkan berbagai jaringan dan mengatur lalu lintas data antar jaringan."
             },
             {
-                question: "Topologi jaringan dimana semua komputer terhubung ke satu titik pusat disebut?",
+                question: "Topologi jaringan yang semua komputer terhubung ke satu titik pusat adalah?",
                 options: ["Bus", "Ring", "Star", "Mesh"],
                 correct: 2,
-                explanation: "Topologi Star adalah konfigurasi dimana semua perangkat terhubung ke satu titik pusat seperti hub atau switch."
+                explanation: "Topologi Star menghubungkan semua komputer ke satu titik pusat (hub/switch)."
             },
             {
-                question: "IP Address 192.168.1.1 termasuk dalam kelas?",
+                question: "IP Address 10.0.0.1 termasuk dalam kelas?",
                 options: ["Kelas A", "Kelas B", "Kelas C", "Kelas D"],
+                correct: 0,
+                explanation: "IP Address yang dimulai dengan 10 termasuk dalam kelas A (1.0.0.0 - 126.255.255.255)."
+            },
+            {
+                question: "Subnet mask default untuk kelas C adalah?",
+                options: ["255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.255"],
                 correct: 2,
-                explanation: "IP Address yang dimulai dengan 192 termasuk dalam kelas C (192.0.0.0 - 223.255.255.255)."
+                explanation: "Subnet mask default untuk kelas C adalah 255.255.255.0 atau /24."
             },
             {
-                question: "Sistem keamanan yang mengontrol lalu lintas jaringan masuk dan keluar disebut?",
-                options: ["Antivirus", "Firewall", "VPN", "Proxy"],
+                question: "Ancaman keamanan berupa program jahat yang dapat merusak sistem adalah?",
+                options: ["Phishing", "Malware", "Spam", "Hoax"],
                 correct: 1,
-                explanation: "Firewall adalah sistem keamanan yang mengontrol dan memfilter lalu lintas jaringan berdasarkan aturan keamanan yang telah ditetapkan."
+                explanation: "Malware adalah program jahat seperti virus, worm, dan trojan yang dapat merusak sistem komputer."
             },
             {
-                question: "Perbedaan utama antara Hub dan Switch adalah?",
+                question: "Perangkat keamanan yang memfilter lalu lintas jaringan adalah?",
+                options: ["Antivirus", "Firewall", "Router", "Switch"],
+                correct: 1,
+                explanation: "Firewall adalah perangkat keamanan yang memfilter lalu lintas jaringan masuk dan keluar."
+            },
+            {
+                question: "Perbedaan utama Hub dan Switch adalah?",
                 options: [
                     "Hub lebih cepat dari Switch",
-                    "Switch dapat memfilter data berdasarkan MAC address",
-                    "Hub lebih mahal dari Switch",
-                    "Switch hanya untuk jaringan wireless"
-                ],
-                correct: 1,
-                explanation: "Switch dapat memfilter dan meneruskan data berdasarkan MAC address, sedangkan Hub hanya meneruskan data ke semua port."
-            },
-            {
-                question: "Keuntungan utama topologi Ring adalah?",
-                options: [
-                    "Mudah troubleshooting",
-                    "Tidak ada collision karena data mengalir satu arah",
-                    "Biaya instalasi murah",
-                    "Jika satu PC rusak tidak mempengaruhi yang lain"
-                ],
-                correct: 1,
-                explanation: "Dalam topologi Ring, data mengalir dalam satu arah sehingga tidak terjadi collision (tabrakan data)."
-            },
-            {
-                question: "Range IP Address private kelas C adalah?",
-                options: [
-                    "10.0.0.0 - 10.255.255.255",
-                    "172.16.0.0 - 172.31.255.255",
-                    "192.168.0.0 - 192.168.255.255",
-                    "127.0.0.0 - 127.255.255.255"
+                    "Switch mengirim data ke semua port, Hub hanya ke port tujuan",
+                    "Hub mengirim data ke semua port, Switch hanya ke port tujuan",
+                    "Tidak ada perbedaan"
                 ],
                 correct: 2,
-                explanation: "IP Address private kelas C memiliki range 192.168.0.0 - 192.168.255.255 dan sering digunakan di jaringan rumah dan kantor kecil."
+                explanation: "Hub mengirim data ke semua port (broadcast), sedangkan Switch hanya mengirim ke port tujuan (switching)."
             },
             {
-                question: "Proses mengubah data menjadi kode rahasia untuk keamanan disebut?",
-                options: ["Kompilasi", "Enkripsi", "Kompresi", "Konversi"],
-                correct: 1,
-                explanation: "Enkripsi adalah proses mengubah data menjadi kode rahasia yang hanya dapat dibaca dengan kunci dekripsi yang tepat."
+                question: "Protokol yang digunakan untuk mengamankan komunikasi data adalah?",
+                options: ["HTTP", "FTP", "HTTPS", "SMTP"],
+                correct: 2,
+                explanation: "HTTPS (HTTP Secure) menggunakan enkripsi SSL/TLS untuk mengamankan komunikasi data."
             }
         ];
 
-        // Example questions
-        const exampleQuestions = [
-            {
-                question: "Apa yang dimaksud dengan topologi jaringan Star?",
-                options: [
-                    "Semua komputer terhubung dalam bentuk lingkaran",
-                    "Semua komputer terhubung ke satu titik pusat",
-                    "Komputer terhubung dalam satu garis lurus",
-                    "Setiap komputer terhubung ke semua komputer lain"
-                ],
-                correct: 1,
-                explanation: "Topologi Star adalah konfigurasi jaringan dimana semua komputer atau perangkat terhubung ke satu titik pusat (hub atau switch). Keuntungannya adalah jika satu komputer bermasalah, tidak akan mempengaruhi komputer lain."
-            },
-            {
-                question: "Manakah yang termasuk perangkat jaringan layer 2?",
-                options: ["Router", "Switch", "Gateway", "Modem"],
-                correct: 1,
-                explanation: "Switch bekerja di layer 2 (Data Link Layer) dan menggunakan MAC address untuk meneruskan frame data ke tujuan yang tepat dalam jaringan lokal."
-            },
-            {
-                question: "IP Address 172.16.10.5 termasuk jenis?",
-                options: ["IP Public", "IP Private", "IP Broadcast", "IP Multicast"],
-                correct: 1,
-                explanation: "IP Address 172.16.10.5 termasuk IP Private karena berada dalam range 172.16.0.0 - 172.31.255.255 yang merupakan alamat private kelas B."
-            }
-        ];
+        let currentQuestion = 0;
+        let userAnswers = [];
+        let studentData = {};
 
-        // Utility functions
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function openModal(modalId) {
-            document.getElementById(modalId).classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        function markAsRead(modalId) {
-            readMaterials.add(modalId);
-            updateProgress();
-            closeModal(modalId);
-            
-            // Show success message
-            showNotification('Materi berhasil ditandai sebagai sudah dibaca! 🎉', 'success');
-        }
-
-        function updateProgress() {
-            const totalMaterials = 6;
-            const readCount = readMaterials.size;
-            const percentage = (readCount / totalMaterials) * 100;
-            
-            document.getElementById('progress-bar').style.width = percentage + '%';
-            document.getElementById('progress-text').textContent = Math.round(percentage) + '%';
-        }
-
-        function showNotification(message, type = 'info') {
-            const notification = document.createElement('div');
-            notification.className = `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 ${
-                type === 'success' ? 'bg-green-500 text-white' : 
-                type === 'error' ? 'bg-red-500 text-white' : 
-                'bg-blue-500 text-white'
-            }`;
-            notification.textContent = message;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.remove();
-            }, 3000);
-        }
-
-        // Example questions functionality
-        function nextExample() {
-            currentExampleIndex = (currentExampleIndex + 1) % exampleQuestions.length;
-            displayExample();
-        }
-
-        function displayExample() {
-            const example = exampleQuestions[currentExampleIndex];
-            const container = document.getElementById('example-question');
-            
-            container.innerHTML = `
-                <h3 class="text-xl font-semibold mb-4 text-gray-800">Contoh Soal ${currentExampleIndex + 1}</h3>
-                <p class="text-gray-700 mb-4">${example.question}</p>
-                
-                <div class="grid md:grid-cols-2 gap-4 mb-6">
-                    <div>
-                        <p class="font-medium text-gray-800 mb-2">Pilihan Jawaban:</p>
-                        <div class="space-y-2">
-                            ${example.options.map((option, index) => `
-                                <div class="p-3 ${index === example.correct ? 'bg-green-100 border-2 border-green-500' : 'bg-gray-50'} rounded-lg">
-                                    ${String.fromCharCode(65 + index)}. ${option}
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                    
-                    <div class="flex justify-center items-center">
-                        ${getExampleIllustration(currentExampleIndex)}
-                    </div>
-                </div>
-                
-                <div class="bg-green-50 border-l-4 border-green-500 p-4">
-                    <h4 class="font-semibold text-green-800 mb-2">Pembahasan:</h4>
-                    <p class="text-green-700">Jawaban yang benar adalah <strong>${String.fromCharCode(65 + example.correct)}</strong>. ${example.explanation}</p>
-                </div>
-            `;
-        }
-
-        function getExampleIllustration(index) {
-            const illustrations = [
-                // Star topology
-                `<svg width="200" height="150" viewBox="0 0 200 150">
-                    <circle cx="100" cy="75" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="3"/>
-                    <text x="100" y="80" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Hub</text>
-                    <circle cx="50" cy="30" r="10" fill="#3b82f6"/>
-                    <circle cx="150" cy="30" r="10" fill="#3b82f6"/>
-                    <circle cx="50" cy="120" r="10" fill="#3b82f6"/>
-                    <circle cx="150" cy="120" r="10" fill="#3b82f6"/>
-                    <line x1="90" y1="65" x2="60" y2="40" stroke="#10b981" stroke-width="2"/>
-                    <line x1="110" y1="65" x2="140" y2="40" stroke="#10b981" stroke-width="2"/>
-                    <line x1="90" y1="85" x2="60" y2="110" stroke="#10b981" stroke-width="2"/>
-                    <line x1="110" y1="85" x2="140" y2="110" stroke="#10b981" stroke-width="2"/>
-                </svg>`,
-                // Switch illustration
-                `<svg width="200" height="120" viewBox="0 0 200 120">
-                    <rect x="75" y="45" width="50" height="30" fill="#10b981" rx="5"/>
-                    <text x="100" y="65" text-anchor="middle" fill="white" font-size="10" font-weight="bold">SWITCH</text>
-                    <circle cx="40" cy="30" r="8" fill="#3b82f6"/>
-                    <circle cx="160" cy="30" r="8" fill="#3b82f6"/>
-                    <circle cx="40" cy="90" r="8" fill="#3b82f6"/>
-                    <circle cx="160" cy="90" r="8" fill="#3b82f6"/>
-                    <line x1="75" y1="50" x2="48" y2="35" stroke="#10b981" stroke-width="3"/>
-                    <line x1="125" y1="50" x2="152" y2="35" stroke="#d1d5db" stroke-width="1"/>
-                    <line x1="75" y1="70" x2="48" y2="85" stroke="#d1d5db" stroke-width="1"/>
-                    <line x1="125" y1="70" x2="152" y2="85" stroke="#d1d5db" stroke-width="1"/>
-                </svg>`,
-                // IP Address illustration
-                `<svg width="200" height="100" viewBox="0 0 200 100">
-                    <rect x="20" y="30" width="160" height="40" fill="#3b82f6" rx="5"/>
-                    <text x="100" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">172.16.10.5</text>
-                    <text x="100" y="20" text-anchor="middle" fill="#6b7280" font-size="12">IP Private</text>
-                    <text x="100" y="85" text-anchor="middle" fill="#6b7280" font-size="10">Range: 172.16.0.0 - 172.31.255.255</text>
-                </svg>`
-            ];
-            return illustrations[index] || illustrations[0];
-        }
-
-        // Quiz functionality
         function startQuiz() {
             const name = document.getElementById('student-name').value.trim();
             const studentClass = document.getElementById('student-class').value;
             
             if (!name || !studentClass) {
-                showNotification('Mohon lengkapi nama dan kelas terlebih dahulu!', 'error');
+                alert('Mohon lengkapi nama dan kelas terlebih dahulu!');
                 return;
             }
             
-            // Hide form and show quiz
+            studentData = {
+                name: name,
+                class: studentClass,
+                timestamp: new Date().toISOString()
+            };
+            
             document.getElementById('student-form').classList.add('hidden');
             document.getElementById('quiz-container').classList.remove('hidden');
             
-            // Initialize quiz
-            currentQuestionIndex = 0;
-            userAnswers = [];
-            quizStartTime = new Date();
-            
-            displayQuestion();
-            showNotification('Kuis dimulai! Semangat! 💪', 'success');
+            currentQuestion = 0;
+            userAnswers = new Array(quizQuestions.length).fill(-1);
+            showQuestion();
         }
 
-        function displayQuestion() {
-            const question = quizQuestions[currentQuestionIndex];
-            const container = document.getElementById('question-container');
+        function showQuestion() {
+            const question = quizQuestions[currentQuestion];
+            document.getElementById('question-text').textContent = `${currentQuestion + 1}. ${question.question}`;
+            document.getElementById('question-counter').textContent = `${currentQuestion + 1}/${quizQuestions.length}`;
+            document.getElementById('progress-bar').style.width = `${((currentQuestion + 1) / quizQuestions.length) * 100}%`;
             
-            container.innerHTML = `
-                <div class="mb-6">
-                    <h4 class="text-lg font-semibold text-gray-800 mb-4">${question.question}</h4>
-                    <div class="space-y-3">
-                        ${question.options.map((option, index) => `
-                            <label class="flex items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">
-                                <input type="radio" name="answer" value="${index}" class="mr-3 text-blue-500">
-                                <span class="text-gray-700">${String.fromCharCode(65 + index)}. ${option}</span>
-                            </label>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
             
-            // Update progress and navigation
-            updateQuizProgress();
-            updateNavigationButtons();
+            question.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = 'quiz-option w-full text-left p-4 rounded-lg border-2 border-gray-200';
+                button.textContent = `${String.fromCharCode(65 + index)}. ${option}`;
+                button.onclick = () => selectAnswer(index);
+                
+                if (userAnswers[currentQuestion] === index) {
+                    button.classList.add('bg-blue-100', 'border-blue-500');
+                }
+                
+                optionsContainer.appendChild(button);
+            });
             
-            // Restore previous answer if exists
-            if (userAnswers[currentQuestionIndex] !== undefined) {
-                const radio = container.querySelector(`input[value="${userAnswers[currentQuestionIndex]}"]`);
-                if (radio) radio.checked = true;
-            }
-        }
-
-        function updateQuizProgress() {
-            const progress = ((currentQuestionIndex + 1) / quizQuestions.length) * 100;
-            document.getElementById('quiz-progress').style.width = progress + '%';
-            document.getElementById('current-question').textContent = currentQuestionIndex + 1;
-            document.getElementById('total-questions').textContent = quizQuestions.length;
-        }
-
-        function updateNavigationButtons() {
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            const submitBtn = document.getElementById('submit-btn');
+            // Update navigation buttons
+            document.getElementById('prev-btn').disabled = currentQuestion === 0;
+            document.getElementById('next-btn').disabled = userAnswers[currentQuestion] === -1;
             
-            prevBtn.classList.toggle('hidden', currentQuestionIndex === 0);
-            
-            if (currentQuestionIndex === quizQuestions.length - 1) {
-                nextBtn.classList.add('hidden');
-                submitBtn.classList.remove('hidden');
+            if (currentQuestion === quizQuestions.length - 1) {
+                document.getElementById('next-btn').classList.add('hidden');
+                document.getElementById('finish-btn').classList.remove('hidden');
+                document.getElementById('finish-btn').disabled = userAnswers[currentQuestion] === -1;
             } else {
-                nextBtn.classList.remove('hidden');
-                submitBtn.classList.add('hidden');
+                document.getElementById('next-btn').classList.remove('hidden');
+                document.getElementById('finish-btn').classList.add('hidden');
             }
         }
 
-        function saveCurrentAnswer() {
-            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-            if (selectedAnswer) {
-                userAnswers[currentQuestionIndex] = parseInt(selectedAnswer.value);
-            }
+        function selectAnswer(answerIndex) {
+            userAnswers[currentQuestion] = answerIndex;
+            
+            // Update button styles
+            document.querySelectorAll('.quiz-option').forEach((btn, index) => {
+                btn.classList.remove('bg-blue-100', 'border-blue-500');
+                if (index === answerIndex) {
+                    btn.classList.add('bg-blue-100', 'border-blue-500');
+                }
+            });
+            
+            // Enable navigation
+            document.getElementById('next-btn').disabled = false;
+            document.getElementById('finish-btn').disabled = false;
         }
 
         function nextQuestion() {
-            saveCurrentAnswer();
-            if (currentQuestionIndex < quizQuestions.length - 1) {
-                currentQuestionIndex++;
-                displayQuestion();
+            if (currentQuestion < quizQuestions.length - 1) {
+                currentQuestion++;
+                showQuestion();
             }
         }
 
         function previousQuestion() {
-            saveCurrentAnswer();
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                displayQuestion();
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion();
             }
         }
 
-        function submitQuiz() {
-            saveCurrentAnswer();
+        async function finishQuiz() {
+            const score = calculateScore();
+            const percentage = Math.round((score / quizQuestions.length) * 100);
             
-            // Check if all questions are answered
-            const unanswered = [];
-            for (let i = 0; i < quizQuestions.length; i++) {
-                if (userAnswers[i] === undefined) {
-                    unanswered.push(i + 1);
-                }
-            }
-            
-            if (unanswered.length > 0) {
-                showNotification(`Mohon jawab semua soal. Soal yang belum dijawab: ${unanswered.join(', ')}`, 'error');
-                return;
-            }
-            
-            // Calculate results
-            const results = calculateResults();
-            
-            // Send to Google Sheets
-            sendToGoogleSheets(results);
-            
-            // Show results
-            showResults(results);
-        }
-
-        function calculateResults() {
-            const endTime = new Date();
-            const timeTaken = Math.floor((endTime - quizStartTime) / 1000);
-            
-            let correctCount = 0;
-            const detailedResults = [];
-            
-            for (let i = 0; i < quizQuestions.length; i++) {
-                const isCorrect = userAnswers[i] === quizQuestions[i].correct;
-                if (isCorrect) correctCount++;
-                
-                detailedResults.push({
-                    questionIndex: i,
-                    userAnswer: userAnswers[i],
-                    correctAnswer: quizQuestions[i].correct,
-                    isCorrect: isCorrect
-                });
-            }
-            
-            const score = Math.round((correctCount / quizQuestions.length) * 100);
-            
-            return {
+            // Prepare data for Google Sheets
+            const quizData = {
+                ...studentData,
                 score: score,
-                correctCount: correctCount,
-                incorrectCount: quizQuestions.length - correctCount,
-                timeTaken: timeTaken,
-                detailedResults: detailedResults
+                total: quizQuestions.length,
+                percentage: percentage,
+                answers: userAnswers.map((answer, index) => ({
+                    question: index + 1,
+                    userAnswer: answer,
+                    correctAnswer: quizQuestions[index].correct,
+                    isCorrect: answer === quizQuestions[index].correct
+                }))
             };
-        }
-
-                function sendToGoogleSheets(results) {
-            const studentName = document.getElementById('student-name').value;
-            const studentClass = document.getElementById('student-class').value;
-            const timestamp = new Date().toLocaleString('id-ID');
-
-        // Prepare detailed answers
-            const answers = userAnswers.map((answer, index) => {
-                const question = quizQuestions[index];
-                return {
-                question: question.question,
-                userAnswer: question.options[answer] || 'Tidak dijawab',
-                correctAnswer: question.options[question.correct],
-                isCorrect: answer === question.correct
-                };
-            });
-
-                const data = {
-                    timestamp: timestamp,
-                    name: studentName,
-                    class: studentClass,
-                    score: results.score,
-                    correctCount: results.correctCount,
-                    incorrectCount: results.incorrectCount,
-                    timeTaken: formatTime(results.timeTaken),
-                    answers: answers
-                };
-
-    // URL Web App dari Apps Script
-                const scriptURL = "PASTE_WEB_APP_URL_HERE";
-
-             fetch(scriptURL, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
-            })
-                .then(res => res.json())
-                .then(response => {
-                console.log("Sukses:", response);
-                showNotification("Data berhasil dikirim ke Google Sheets ✅", "success");
-            })
-                .catch(err => {
-                console.error("Error:", err);
-                showNotification("Gagal mengirim data ke Google Sheets ❌", "error");
-            });
-
-        function showResults(results) {
-            // Hide quiz container and show results
-            document.getElementById('quiz-container').classList.add('hidden');
-            document.getElementById('quiz-results').classList.remove('hidden');
             
-            // Update results display
-            document.getElementById('final-score').textContent = results.score + '%';
-            document.getElementById('correct-count').textContent = results.correctCount;
-            document.getElementById('incorrect-count').textContent = results.incorrectCount;
-            document.getElementById('time-taken').textContent = formatTime(results.timeTaken);
-            
-            // Update score message
-            const scoreMessage = document.getElementById('score-message');
-            if (results.score >= 90) {
-                scoreMessage.textContent = 'Luar biasa! Kamu sangat menguasai materi! 🌟';
-                scoreMessage.className = 'text-xl text-green-600 mb-6';
-            } else if (results.score >= 75) {
-                scoreMessage.textContent = 'Bagus sekali! Kamu sudah memahami materi dengan baik! 👏';
-                scoreMessage.className = 'text-xl text-blue-600 mb-6';
-            } else if (results.score >= 60) {
-                scoreMessage.textContent = 'Cukup baik! Masih ada ruang untuk improvement! 💪';
-                scoreMessage.className = 'text-xl text-yellow-600 mb-6';
-            } else {
-                scoreMessage.textContent = 'Jangan menyerah! Coba pelajari materi lagi dan ulangi kuis! 🚀';
-                scoreMessage.className = 'text-xl text-red-600 mb-6';
+            // Send to Google Sheets (replace with your actual Apps Script URL)
+            try {
+                await fetch('https://script.google.com/macros/s/AKfycbznF2CIkLnfhoa5L_12PJAx29L5I9MB9Tj-LuBhwDQs/exec', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(quizData)
+                });
+            } catch (error) {
+                console.log('Data akan disimpan ke spreadsheet:', quizData);
             }
             
-            // Scroll to results
-            document.getElementById('quiz-results').scrollIntoView({ behavior: 'smooth' });
+            showResult(score, percentage);
         }
 
-        function formatTime(seconds) {
-            const minutes = Math.floor(seconds / 60);
-            const remainingSeconds = seconds % 60;
-            return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+        function calculateScore() {
+            return userAnswers.reduce((score, answer, index) => {
+                return score + (answer === quizQuestions[index].correct ? 1 : 0);
+            }, 0);
         }
 
-        function reviewAnswers() {
-            document.getElementById('quiz-results').classList.add('hidden');
-            document.getElementById('answer-review').classList.remove('hidden');
+        function showResult(score, percentage) {
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
             
-            const reviewContent = document.getElementById('review-content');
-            let reviewHTML = '';
-            
-            quizQuestions.forEach((question, index) => {
-                const userAnswer = userAnswers[index];
-                const isCorrect = userAnswer === question.correct;
+            let resultHTML = `
+                <div class="mb-6">
+                    <div class="text-6xl mb-4">${percentage >= 80 ? '🎉' : percentage >= 60 ? '👍' : '📚'}</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Hasil Kuis</h3>
+                    <p class="text-lg text-gray-600">Nama: ${studentData.name} | Kelas: ${studentData.class}</p>
+                </div>
                 
-                reviewHTML += `
-                    <div class="mb-8 p-6 bg-gray-50 rounded-lg">
-                        <div class="flex items-center mb-4">
-                            <span class="text-lg font-semibold text-gray-800 mr-3">Soal ${index + 1}</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium ${isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
-                                ${isCorrect ? '✓ Benar' : '✗ Salah'}
-                            </span>
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg mb-6">
+                    <div class="text-4xl font-bold ${percentage >= 80 ? 'text-green-600' : percentage >= 60 ? 'text-yellow-600' : 'text-red-600'} mb-2">
+                        ${score}/${quizQuestions.length}
+                    </div>
+                    <div class="text-2xl font-semibold text-gray-700 mb-2">${percentage}%</div>
+                    <div class="text-lg ${percentage >= 80 ? 'text-green-600' : percentage >= 60 ? 'text-yellow-600' : 'text-red-600'}">
+                        ${percentage >= 80 ? 'Excellent! 🌟' : percentage >= 60 ? 'Good Job! 👏' : 'Keep Learning! 💪'}
+                    </div>
+                </div>
+                
+                <div class="text-left">
+                    <h4 class="font-bold text-gray-800 mb-4">📋 Review Jawaban:</h4>
+                    <div class="space-y-3 max-h-60 overflow-y-auto">
+            `;
+            
+            userAnswers.forEach((answer, index) => {
+                const question = quizQuestions[index];
+                const isCorrect = answer === question.correct;
+                
+                resultHTML += `
+                    <div class="p-3 rounded-lg border ${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}">
+                        <div class="font-semibold ${isCorrect ? 'text-green-800' : 'text-red-800'} mb-1">
+                            ${isCorrect ? '✅' : '❌'} Soal ${index + 1}
                         </div>
-                        
-                        <p class="text-gray-700 mb-4 font-medium">${question.question}</p>
-                        
-                        <div class="grid md:grid-cols-2 gap-4 mb-4">
-                            <div>
-                                <p class="text-sm text-gray-600 mb-2">Pilihan Jawaban:</p>
-                                <div class="space-y-2">
-                                    ${question.options.map((option, optIndex) => `
-                                        <div class="p-2 rounded text-sm ${
-                                            optIndex === question.correct ? 'bg-green-100 border border-green-300' :
-                                            optIndex === userAnswer && !isCorrect ? 'bg-red-100 border border-red-300' :
-                                            'bg-white border border-gray-200'
-                                        }">
-                                            ${String.fromCharCode(65 + optIndex)}. ${option}
-                                            ${optIndex === question.correct ? ' ✓' : ''}
-                                            ${optIndex === userAnswer && !isCorrect ? ' (Jawaban Anda)' : ''}
-                                        </div>
-                                    `).join('')}
-                                </div>
+                        ${!isCorrect ? `
+                            <div class="text-sm text-gray-600 mb-1">
+                                <strong>Jawaban Anda:</strong> ${question.options[answer] || 'Tidak dijawab'}
                             </div>
-                            
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <h5 class="font-semibold text-blue-800 mb-2">Pembahasan:</h5>
-                                <p class="text-blue-700 text-sm">${question.explanation}</p>
+                            <div class="text-sm text-green-600 mb-1">
+                                <strong>Jawaban Benar:</strong> ${question.options[question.correct]}
                             </div>
-                        </div>
+                            <div class="text-xs text-gray-500">
+                                ${question.explanation}
+                            </div>
+                        ` : ''}
                     </div>
                 `;
             });
             
-            reviewContent.innerHTML = reviewHTML;
-            document.getElementById('answer-review').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function backToResults() {
-            document.getElementById('answer-review').classList.add('hidden');
-            document.getElementById('quiz-results').classList.remove('hidden');
-        }
-
-        function restartQuiz() {
-            // Reset all variables
-            currentQuestionIndex = 0;
-            userAnswers = [];
-            quizStartTime = null;
+            resultHTML += `
+                    </div>
+                </div>
+            `;
             
-            // Show form again
-            document.getElementById('quiz-results').classList.add('hidden');
-            document.getElementById('answer-review').classList.add('hidden');
+            document.getElementById('result-content').innerHTML = resultHTML;
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-result').classList.add('hidden');
             document.getElementById('student-form').classList.remove('hidden');
-            
-            // Clear form
             document.getElementById('student-name').value = '';
             document.getElementById('student-class').value = '';
-            
-            // Scroll to quiz section
-            document.getElementById('kuis').scrollIntoView({ behavior: 'smooth' });
-            
-            showNotification('Kuis direset! Siap untuk mencoba lagi? 🔄', 'info');
+            currentQuestion = 0;
+            userAnswers = [];
+            studentData = {};
         }
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
-            displayExample();
-            
-            // Add smooth scrolling to navigation links
-            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-            
-            // Add keyboard navigation for quiz
-            document.addEventListener('keydown', function(e) {
-                if (document.getElementById('quiz-container').classList.contains('hidden')) return;
-                
-                if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
-                    previousQuestion();
-                } else if (e.key === 'ArrowRight' && currentQuestionIndex < quizQuestions.length - 1) {
-                    nextQuestion();
-                } else if (e.key === 'Enter' && currentQuestionIndex === quizQuestions.length - 1) {
-                    submitQuiz();
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
-            
-            showNotification('Selamat datang di pembelajaran Komputer & Jaringan! 🎓', 'success');
-        });
-
-        // Close modals when clicking outside
-        document.addEventListener('click', function(e) {
-            if (e.target.classList.contains('fixed') && e.target.classList.contains('inset-0')) {
-                const modalId = e.target.id;
-                if (modalId && modalId.startsWith('modal')) {
-                    closeModal(modalId);
-                }
-            }
-        });
-
-        // Add escape key to close modals
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                const openModal = document.querySelector('.fixed.inset-0:not(.hidden)');
-                if (openModal) {
-                    closeModal(openModal.id);
-                }
-            }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97ff908c6472f8e2',t:'MTc1ODAxNzMyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9800dea2725d8936',t:'MTc1ODAzMTAxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
