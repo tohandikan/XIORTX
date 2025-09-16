@@ -1715,23 +1715,25 @@
             };
             
             // Google Apps Script Web App URL (replace with your actual URL)
-            const scriptURL = "https://script.google.com/macros/s/AKfycbznF2CIkLnfhoa5L_12PJAx29L5I9MB9Tj-LuBhwDQs/dev";
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbznF2CIkLnfhoa5L_12PJAx29L5I9MB9Tj-LuBhwDQs/exec';
             
             fetch(scriptURL, {
                 method: 'POST',
-                headers: { "Content-Type": "application/json" },
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 body: JSON.stringify(data)
-            })   
-                .then(res => res.json())
-                .then(response => {
-                    console.log("Sukses:", response);
-                    showNotification("Data berhasil dikirim ke Google Sheets ✅", "success");
             })
-            .catch(err => {
-                console.error("Error:", err);
-                showNotification("Gagal mengirim data ke Google Sheets ❌", "error");
+            .then(() => {
+                console.log('Data berhasil dikirim ke Google Sheets');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('Hasil kuis tersimpan lokal. Koneksi ke server bermasalah.', 'error');
             });
-           
+        }
+
         function showResults(results) {
             // Hide quiz container and show results
             document.getElementById('quiz-container').classList.add('hidden');
