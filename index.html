@@ -263,11 +263,90 @@
                         </div>
                     </div>
                     
-                    <div class="slide-in-right floating-animation">
-                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                             alt="Gaming Setup" 
-                             class="rounded-2xl glow-effect w-full"
-                             onerror="this.src=''; this.alt='Gaming setup image failed to load'; this.style.display='none';">
+                    <div class="slide-in-right">
+                        <div class="relative overflow-hidden rounded-2xl glow-effect">
+                            <!-- Image Slider -->
+                            <div class="slider-container relative h-96 md:h-[500px]">
+                                <div class="slider-track flex transition-transform duration-500 ease-in-out h-full" id="slider-track">
+                                    <div class="slider-slide min-w-full h-full">
+                                        <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                             alt="Gaming Setup 1" 
+                                             class="w-full h-full object-cover"
+                                             onerror="this.src=''; this.alt='Gaming setup image failed to load'; this.style.display='none';">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                                        <div class="absolute bottom-4 left-4 text-white">
+                                            <h3 class="text-xl font-bold">Ultimate Gaming Setup</h3>
+                                            <p class="text-sm opacity-90">RGB lighting & premium peripherals</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="slider-slide min-w-full h-full">
+                                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                             alt="Gaming Setup 2" 
+                                             class="w-full h-full object-cover"
+                                             onerror="this.src=''; this.alt='Gaming setup image failed to load'; this.style.display='none';">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                        <div class="absolute bottom-4 left-4 text-white">
+                                            <h3 class="text-xl font-bold">Professional Gaming</h3>
+                                            <p class="text-sm opacity-90">Esports-grade equipment</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="slider-slide min-w-full h-full">
+                                        <img src="https://images.unsplash.com/photo-1616763355548-1b606f439f86?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                             alt="Gaming Setup 3" 
+                                             class="w-full h-full object-cover"
+                                             onerror="this.src=''; this.alt='Gaming setup image failed to load'; this.style.display='none';">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                        <div class="absolute bottom-4 left-4 text-white">
+                                            <h3 class="text-xl font-bold">Streaming Station</h3>
+                                            <p class="text-sm opacity-90">Content creator paradise</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="slider-slide min-w-full h-full">
+                                        <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                             alt="Gaming Setup 4" 
+                                             class="w-full h-full object-cover"
+                                             onerror="this.src=''; this.alt='Gaming setup image failed to load'; this.style.display='none';">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                        <div class="absolute bottom-4 left-4 text-white">
+                                            <h3 class="text-xl font-bold">Minimalist Setup</h3>
+                                            <p class="text-sm opacity-90">Clean & powerful design</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="slider-slide min-w-full h-full">
+                                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                             alt="Gaming Setup 5" 
+                                             class="w-full h-full object-cover"
+                                             onerror="this.src=''; this.alt='Gaming setup image failed to load'; this.style.display='none';">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                        <div class="absolute bottom-4 left-4 text-white">
+                                            <h3 class="text-xl font-bold">Multi-Monitor Beast</h3>
+                                            <p class="text-sm opacity-90">Maximum productivity & gaming</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Navigation Arrows -->
+                                <button onclick="previousSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button onclick="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                
+                                <!-- Dots Indicator -->
+                                <div class="absolute bottom-4 right-4 flex space-x-2">
+                                    <button onclick="goToSlide(0)" class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300"></button>
+                                    <button onclick="goToSlide(1)" class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300"></button>
+                                    <button onclick="goToSlide(2)" class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300"></button>
+                                    <button onclick="goToSlide(3)" class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300"></button>
+                                    <button onclick="goToSlide(4)" class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300"></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -387,20 +466,36 @@
     <!-- About Page -->
     <div id="about" class="page pt-24">
         <div class="container mx-auto px-6 py-12">
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-6xl mx-auto">
                 <h1 class="text-4xl font-orbitron font-bold text-center mb-12 neon-text">Tentang DarkFlow Gaming</h1>
                 
-                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <!-- Hero Section -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
                     <div>
-                        <h2 class="text-2xl font-bold mb-6 text-cyan-400">Misi Kami</h2>
-                        <p class="text-gray-300 mb-6">
+                        <h2 class="text-3xl font-bold mb-6 text-cyan-400">Misi Kami</h2>
+                        <p class="text-gray-300 mb-6 text-lg leading-relaxed">
                             DarkFlow Gaming didirikan dengan misi untuk menyediakan peralatan gaming terbaik bagi para gamer Indonesia. 
                             Kami percaya bahwa setiap gamer berhak mendapatkan gear berkualitas premium untuk meningkatkan performa gaming mereka.
                         </p>
-                        <p class="text-gray-300">
+                        <p class="text-gray-300 mb-8 text-lg leading-relaxed">
                             Dengan pengalaman lebih dari 5 tahun di industri gaming, kami memahami kebutuhan spesifik para gamer 
                             dan berkomitmen untuk menyediakan produk-produk terdepan dengan harga yang kompetitif.
                         </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-full">
+                                <i class="fas fa-award text-cyan-400"></i>
+                                <span class="text-sm">Kualitas Terjamin</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-full">
+                                <i class="fas fa-shield-alt text-purple-400"></i>
+                                <span class="text-sm">Garansi Resmi</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-full">
+                                <i class="fas fa-shipping-fast text-green-400"></i>
+                                <span class="text-sm">Pengiriman Cepat</span>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
@@ -409,19 +504,165 @@
                              onerror="this.src=''; this.alt='Team image failed to load'; this.style.display='none';">
                     </div>
                 </div>
-                
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20">
+
+                <!-- Stats Section -->
+                <div class="grid md:grid-cols-4 gap-8 text-center mb-20">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20 card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
                         <h3 class="text-3xl font-bold text-cyan-400 mb-2">10,000+</h3>
                         <p class="text-gray-400">Pelanggan Puas</p>
                     </div>
-                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20 card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-gamepad text-2xl"></i>
+                        </div>
                         <h3 class="text-3xl font-bold text-cyan-400 mb-2">500+</h3>
                         <p class="text-gray-400">Produk Gaming</p>
                     </div>
-                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20 card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-2xl"></i>
+                        </div>
                         <h3 class="text-3xl font-bold text-cyan-400 mb-2">24/7</h3>
                         <p class="text-gray-400">Customer Support</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20 card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-star text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-cyan-400 mb-2">4.9/5</h3>
+                        <p class="text-gray-400">Rating Pelanggan</p>
+                    </div>
+                </div>
+
+                <!-- Our Story Section -->
+                <div class="mb-20">
+                    <h2 class="text-3xl font-orbitron font-bold text-center mb-12 text-cyan-400">Cerita Kami</h2>
+                    <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-3xl p-8 md:p-12 border border-cyan-500/20">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-6 text-white">Dari Passion Menjadi Bisnis</h3>
+                                <p class="text-gray-300 mb-6 leading-relaxed">
+                                    DarkFlow Gaming dimulai dari sebuah passion sederhana - kecintaan terhadap dunia gaming. 
+                                    Founder kami, seorang gamer hardcore, frustrasi dengan sulitnya mendapatkan gear gaming 
+                                    berkualitas dengan harga terjangkau di Indonesia.
+                                </p>
+                                <p class="text-gray-300 mb-6 leading-relaxed">
+                                    Pada tahun 2019, kami memulai dengan menjual keyboard gaming custom kepada teman-teman 
+                                    di komunitas gaming lokal. Respon yang luar biasa positif mendorong kami untuk 
+                                    memperluas jangkauan dan produk yang kami tawarkan.
+                                </p>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Hari ini, DarkFlow Gaming telah menjadi salah satu retailer gaming gear terpercaya 
+                                    di Indonesia, melayani ribuan gamer dari Sabang sampai Merauke.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-rocket text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white mb-2">2019 - Awal Mula</h4>
+                                        <p class="text-gray-400 text-sm">Memulai bisnis dari garasi dengan 10 keyboard custom</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-store text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white mb-2">2021 - Ekspansi</h4>
+                                        <p class="text-gray-400 text-sm">Membuka toko online dan warehouse pertama</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-trophy text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white mb-2">2024 - Pencapaian</h4>
+                                        <p class="text-gray-400 text-sm">10,000+ pelanggan puas dan 500+ produk gaming</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Section -->
+                <div class="mb-20">
+                    <h2 class="text-3xl font-orbitron font-bold text-center mb-12 text-cyan-400">Tim Kami</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-cyan-500/20 text-center card-hover">
+                            <div class="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-user-tie text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Alex Chen</h3>
+                            <p class="text-cyan-400 mb-3">Founder & CEO</p>
+                            <p class="text-gray-400 text-sm">Pro gamer dengan 10+ tahun pengalaman di industri esports</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-cyan-500/20 text-center card-hover">
+                            <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-cogs text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Sarah Kim</h3>
+                            <p class="text-cyan-400 mb-3">Head of Product</p>
+                            <p class="text-gray-400 text-sm">Ahli teknologi gaming dengan background engineering</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-cyan-500/20 text-center card-hover">
+                            <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-heart text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Mike Johnson</h3>
+                            <p class="text-cyan-400 mb-3">Customer Success</p>
+                            <p class="text-gray-400 text-sm">Memastikan setiap pelanggan mendapat pengalaman terbaik</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Values Section -->
+                <div>
+                    <h2 class="text-3xl font-orbitron font-bold text-center mb-12 text-cyan-400">Nilai-Nilai Kami</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl p-8 border border-cyan-500/20">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-gem text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Kualitas Premium</h3>
+                            </div>
+                            <p class="text-gray-300">Kami hanya menjual produk berkualitas tinggi yang telah melalui quality control ketat.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl p-8 border border-cyan-500/20">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-handshake text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Kepercayaan</h3>
+                            </div>
+                            <p class="text-gray-300">Membangun hubungan jangka panjang dengan pelanggan berdasarkan kepercayaan dan transparansi.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl p-8 border border-cyan-500/20">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-lightbulb text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Inovasi</h3>
+                            </div>
+                            <p class="text-gray-300">Selalu mengikuti perkembangan teknologi gaming terbaru untuk memberikan yang terbaik.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl p-8 border border-cyan-500/20">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-users text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Komunitas</h3>
+                            </div>
+                            <p class="text-gray-300">Mendukung dan membangun komunitas gaming Indonesia yang solid dan positif.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -433,66 +674,254 @@
         <div class="container mx-auto px-6 py-12">
             <h1 class="text-4xl font-orbitron font-bold text-center mb-12 neon-text">Hubungi Kami</h1>
             
-            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <div>
-                    <h2 class="text-2xl font-bold mb-6 text-cyan-400">Informasi Kontak</h2>
+            <!-- Hero Contact Section -->
+            <div class="text-center mb-16">
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Punya pertanyaan tentang produk gaming kami? Tim customer service DarkFlow Gaming siap membantu Anda 24/7. 
+                    Hubungi kami melalui berbagai channel yang tersedia!
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-12 max-w-7xl mx-auto mb-16">
+                <!-- Contact Information -->
+                <div class="lg:col-span-1">
+                    <h2 class="text-2xl font-bold mb-8 text-cyan-400">Informasi Kontak</h2>
                     
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center">
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start space-x-4 p-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-xl border border-cyan-500/20">
+                            <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <h3 class="font-semibold">Alamat</h3>
-                                <p class="text-gray-400">Jl. Gaming Street No. 123, MAKASSAR</p>
+                                <h3 class="font-semibold text-white mb-1">Alamat Toko</h3>
+                                <p class="text-gray-400 text-sm">Jl. Gaming Street No. 123</p>
+                                <p class="text-gray-400 text-sm">Jakarta Selatan 12345</p>
+                                <p class="text-gray-400 text-sm">Indonesia</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center">
+                        <div class="flex items-start space-x-4 p-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-xl border border-cyan-500/20">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-white mb-1">WhatsApp</h3>
+                                <p class="text-gray-400 text-sm">+62 812-3456-7890</p>
+                                <p class="text-gray-400 text-sm">Respon cepat 24/7</p>
+                                <button onclick="window.open('https://wa.me/6281234567890', '_blank')" class="text-green-400 hover:text-green-300 text-sm mt-1">
+                                    <i class="fas fa-external-link-alt mr-1"></i>Chat Sekarang
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 p-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-xl border border-cyan-500/20">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div>
-                                <h3 class="font-semibold">Telepon</h3>
-                                <p class="text-gray-400">+62 822-2554-4756</p>
+                                <h3 class="font-semibold text-white mb-1">Telepon</h3>
+                                <p class="text-gray-400 text-sm">+62 822-2554-4756</p>
+                                <p class="text-gray-400 text-sm">Senin - Minggu: 09:00 - 21:00</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center">
+                        <div class="flex items-start space-x-4 p-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-xl border border-cyan-500/20">
+                            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <h3 class="font-semibold">Email</h3>
-                                <p class="text-gray-400">info@nabiltohandika.com</p>
+                                <h3 class="font-semibold text-white mb-1">Email</h3>
+                                <p class="text-gray-400 text-sm">info@darkflowgaming.com</p>
+                                <p class="text-gray-400 text-sm">support@darkflowgaming.com</p>
+                                <p class="text-gray-400 text-sm">Respon dalam 2-4 jam</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-4 text-cyan-400">Ikuti Kami</h3>
+                        <div class="flex space-x-4">
+                            <button onclick="window.open('https://instagram.com/darkflowgaming', '_blank')" class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                                <i class="fab fa-instagram"></i>
+                            </button>
+                            <button onclick="window.open('https://youtube.com/darkflowgaming', '_blank')" class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                                <i class="fab fa-youtube"></i>
+                            </button>
+                            <button onclick="window.open('https://tiktok.com/@darkflowgaming', '_blank')" class="w-12 h-12 bg-gradient-to-r from-gray-800 to-gray-900 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                                <i class="fab fa-tiktok"></i>
+                            </button>
+                            <button onclick="window.open('https://discord.gg/darkflowgaming', '_blank')" class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                                <i class="fab fa-discord"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Operating Hours -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-cyan-500/20">
+                        <h3 class="text-xl font-bold mb-4 text-cyan-400">Jam Operasional</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Senin - Jumat</span>
+                                <span class="text-white">09:00 - 21:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Sabtu</span>
+                                <span class="text-white">09:00 - 22:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Minggu</span>
+                                <span class="text-white">10:00 - 20:00</span>
+                            </div>
+                            <div class="flex justify-between border-t border-gray-600 pt-2 mt-3">
+                                <span class="text-gray-400">WhatsApp Support</span>
+                                <span class="text-green-400">24/7</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20">
-                    <h2 class="text-2xl font-bold mb-6 text-cyan-400">Kirim Pesan</h2>
-                    
-                    <form onsubmit="sendMessage(event)" class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Nama</label>
-                            <input type="text" required class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 focus:border-cyan-500 focus:outline-none">
-                        </div>
+                <!-- Contact Form -->
+                <div class="lg:col-span-2">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20">
+                        <h2 class="text-2xl font-bold mb-6 text-cyan-400">Kirim Pesan</h2>
                         
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" required class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 focus:border-cyan-500 focus:outline-none">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Pesan</label>
-                            <textarea rows="4" required class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 focus:border-cyan-500 focus:outline-none"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-purple-500 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all">
-                            Kirim Pesan
+                        <form onsubmit="sendMessage(event)" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Nama Lengkap *</label>
+                                    <input type="text" name="nama" required class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 focus:border-cyan-500 focus:outline-none transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Email *</label>
+                                    <input type="email" name="email" required class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 focus:border-cyan-500 focus:outline-none transition-colors">
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Nomor WhatsApp</label>
+                                    <input type="tel" name="whatsapp" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 focus:border-cyan-500 focus:outline-none transition-colors" placeholder="08123456789">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Kategori Pertanyaan</label>
+                                    <select name="kategori" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 focus:border-cyan-500 focus:outline-none transition-colors">
+                                        <option value="">Pilih Kategori</option>
+                                        <option value="produk">Pertanyaan Produk</option>
+                                        <option value="pemesanan">Pemesanan</option>
+                                        <option value="pengiriman">Pengiriman</option>
+                                        <option value="garansi">Garansi & Service</option>
+                                        <option value="kerjasama">Kerjasama Bisnis</option>
+                                        <option value="lainnya">Lainnya</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Subjek *</label>
+                                <input type="text" name="subjek" required class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 focus:border-cyan-500 focus:outline-none transition-colors" placeholder="Ringkasan pertanyaan Anda">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Pesan *</label>
+                                <textarea name="pesan" rows="5" required class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 focus:border-cyan-500 focus:outline-none transition-colors" placeholder="Jelaskan pertanyaan atau kebutuhan Anda secara detail..."></textarea>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500">
+                                <label for="newsletter" class="text-sm text-gray-400">
+                                    Saya ingin menerima newsletter dan update produk terbaru dari DarkFlow Gaming
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-purple-500 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all transform hover:scale-105">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <h2 class="text-3xl font-orbitron font-bold text-center mb-12 text-cyan-400">Pertanyaan yang Sering Diajukan</h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-cyan-500/20 overflow-hidden">
+                        <button onclick="toggleFAQ(0)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-800/50 transition-colors">
+                            <h3 class="font-semibold text-white">Apakah semua produk bergaransi resmi?</h3>
+                            <i class="fas fa-chevron-down text-cyan-400 transform transition-transform" id="faq-icon-0"></i>
                         </button>
-                    </form>
+                        <div id="faq-content-0" class="hidden px-6 pb-6">
+                            <p class="text-gray-300">Ya, semua produk DarkFlow Gaming bergaransi resmi dari distributor atau brand langsung. Garansi berkisar 1-3 tahun tergantung produk.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-cyan-500/20 overflow-hidden">
+                        <button onclick="toggleFAQ(1)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-800/50 transition-colors">
+                            <h3 class="font-semibold text-white">Berapa lama waktu pengiriman?</h3>
+                            <i class="fas fa-chevron-down text-cyan-400 transform transition-transform" id="faq-icon-1"></i>
+                        </button>
+                        <div id="faq-content-1" class="hidden px-6 pb-6">
+                            <p class="text-gray-300">Untuk Jakarta dan sekitarnya: 1-2 hari kerja. Luar Jakarta: 2-5 hari kerja. Kami menggunakan ekspedisi terpercaya seperti JNE, J&T, dan SiCepat.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-cyan-500/20 overflow-hidden">
+                        <button onclick="toggleFAQ(2)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-800/50 transition-colors">
+                            <h3 class="font-semibold text-white">Apakah bisa COD (Cash on Delivery)?</h3>
+                            <i class="fas fa-chevron-down text-cyan-400 transform transition-transform" id="faq-icon-2"></i>
+                        </button>
+                        <div id="faq-content-2" class="hidden px-6 pb-6">
+                            <p class="text-gray-300">Ya, kami melayani COD untuk area Jakarta, Bogor, Depok, Tangerang, dan Bekasi. Minimum pembelian Rp 500.000 untuk COD.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-cyan-500/20 overflow-hidden">
+                        <button onclick="toggleFAQ(3)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-800/50 transition-colors">
+                            <h3 class="font-semibold text-white">Bagaimana cara klaim garansi?</h3>
+                            <i class="fas fa-chevron-down text-cyan-400 transform transition-transform" id="faq-icon-3"></i>
+                        </button>
+                        <div id="faq-content-3" class="hidden px-6 pb-6">
+                            <p class="text-gray-300">Hubungi customer service kami dengan menyertakan nomor invoice dan foto produk. Tim kami akan membantu proses klaim garansi ke service center resmi.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-cyan-500/20 overflow-hidden">
+                        <button onclick="toggleFAQ(4)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-800/50 transition-colors">
+                            <h3 class="font-semibold text-white">Apakah ada program trade-in?</h3>
+                            <i class="fas fa-chevron-down text-cyan-400 transform transition-transform" id="faq-icon-4"></i>
+                        </button>
+                        <div id="faq-content-4" class="hidden px-6 pb-6">
+                            <p class="text-gray-300">Ya, kami memiliki program trade-in untuk produk tertentu. Hubungi customer service untuk informasi nilai tukar dan syarat & ketentuan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Map Placeholder -->
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-orbitron font-bold text-center mb-8 text-cyan-400">Lokasi Toko</h2>
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-cyan-500/20 text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marked-alt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">DarkFlow Gaming Store</h3>
+                    <p class="text-gray-300 mb-6">
+                        Jl. Gaming Street No. 123, Sulawesi selatn 123 <br>
+                        (Dekat Mall Gaming Center, lantai 2)
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button onclick="window.open('https://maps.google.com/?q=DarkFlow+Gaming+Jakarta', '_blank')" class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Buka di Google Maps
+                        </button>
+                        <button onclick="window.open('https://waze.com/ul?q=DarkFlow+Gaming+Jakarta', '_blank')" class="bg-gradient-to-r from-cyan-500 to-teal-500 px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-teal-600 transition-all">
+                            <i class="fas fa-route mr-2"></i>
+                            Buka di Waze
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -619,6 +1048,8 @@
         // Global variables
         let cart = [];
         let currentPage = 'home';
+        let currentSlide = 0;
+        let slideInterval;
         
         // Products data
         const products = [
@@ -1195,10 +1626,14 @@ Tanggal: ${new Date(orderData.tanggal).toLocaleString('id-ID')}`;
             event.preventDefault();
             
             const formData = new FormData(event.target);
+            const kategori = formData.get('kategori') ? `\nKategori: ${formData.get('kategori')}` : '';
+            const whatsapp = formData.get('whatsapp') ? `\nWhatsApp: ${formData.get('whatsapp')}` : '';
+            const subjek = formData.get('subjek') ? `\nSubjek: ${formData.get('subjek')}` : '';
+            
             const message = `Halo DarkFlow Gaming!
 
 Nama: ${formData.get('nama')}
-Email: ${formData.get('email')}
+Email: ${formData.get('email')}${whatsapp}${kategori}${subjek}
 
 Pesan:
 ${formData.get('pesan')}`;
@@ -1208,6 +1643,20 @@ ${formData.get('pesan')}`;
             
             showNotification('Pesan akan dikirim melalui WhatsApp!', 'success');
             event.target.reset();
+        }
+
+        // FAQ toggle function
+        function toggleFAQ(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
         }
 
         // Notification system
@@ -1246,9 +1695,70 @@ ${formData.get('pesan')}`;
             }, 3000);
         }
 
+        // Slider functions
+        function nextSlide() {
+            const totalSlides = 5;
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function previousSlide() {
+            const totalSlides = 5;
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const sliderTrack = document.getElementById('slider-track');
+            const dots = document.querySelectorAll('.slider-dot');
+            
+            if (sliderTrack) {
+                sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-white', 'scale-125');
+                } else {
+                    dot.classList.remove('bg-white', 'scale-125');
+                    dot.classList.add('bg-white/50');
+                }
+            });
+        }
+
+        function startSlideshow() {
+            slideInterval = setInterval(() => {
+                nextSlide();
+            }, 4000); // Change slide every 4 seconds
+        }
+
+        function stopSlideshow() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+            }
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             updateCartDisplay();
+            
+            // Initialize slider
+            updateSlider();
+            startSlideshow();
+            
+            // Pause slideshow on hover
+            const sliderContainer = document.querySelector('.slider-container');
+            if (sliderContainer) {
+                sliderContainer.addEventListener('mouseenter', stopSlideshow);
+                sliderContainer.addEventListener('mouseleave', startSlideshow);
+            }
             
             // Add scroll animations
             const observerOptions = {
@@ -1274,5 +1784,5 @@ ${formData.get('pesan')}`;
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a2132cf3e7d176',t:'MTc1OTcyMTM3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a22efd62bace3d',t:'MTc1OTcyMjUxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
